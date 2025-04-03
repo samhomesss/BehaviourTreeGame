@@ -236,7 +236,7 @@ namespace Assets.PixelFantasy.PixelHeroes.Common.Scripts.Utils
         {
             var dict = new Dictionary<Color32, int>();
 
-            for (var x = 0; x < 64; x++) // TODO: Hardcoded values.
+            for (var x = 0; x < 64; x++) // TODO: Hardcoded values. (기본제공 코드임)
             {
                 for (var y = 0; y < 64; y++)
                 {
