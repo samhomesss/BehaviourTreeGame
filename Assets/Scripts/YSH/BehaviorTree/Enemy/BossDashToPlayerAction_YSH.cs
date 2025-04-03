@@ -12,19 +12,38 @@ public partial class BossDashToPlayerAction_YSH : Action
     [SerializeReference] public BlackboardVariable<GameObject> Target;
 
     Rigidbody2D _rigid;
+    float _maxValocity = 5f;
+    Vector2 _moveStartDir;
+    Vector2 dist;
     protected override Status OnStart()
     {
-        _rigid = GameObject.GetComponent<Rigidbody2D>();
+        _rigid = Self.Value.GetComponent<Rigidbody2D>();
         Debug.Log($"Target : {Target.Value}");
+        dist = (Vector2)(Target.Value.transform.position - Self.Value.transform.position).normalized;
+        _moveStartDir = dist;
         return Status.Running;
     }
 
     protected override Status OnUpdate()
     {
-        // Todo: µ¿¿µµ¿¿µÀÌ°¡ ¿©±â¿¡ ¹¹ ÇØÁà¾ß µÊ 
-        Vector2 dist = (Vector2)(Target.Value.transform.position - Self.Value.transform.position).normalized;
+        dist = (Vector2)(Target.Value.transform.position - Self.Value.transform.position).normalized;
+
         _rigid.AddForce(dist * 2 , ForceMode2D.Impulse);
-        return Status.Success;
+
+        if (_rigid.angularVelocity > _maxValocity)
+        {
+            _rigid.angularVelocity = _maxValocity;
+        }
+
+        float dotProduct = Vector2.Dot(dist, _moveStartDir);
+
+        if (dotProduct < 0f)
+        {
+            _rigid.linearVelocity = Vector2.zero;
+            _rigid.angularVelocity = 0f;
+            return Status.Success;
+        }
+        return Status.Running;
     }
 
     protected override void OnEnd()

@@ -9,14 +9,17 @@ using Unity.Properties;
 public partial class BossJumpAction_YSH : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Self;
-
+    Rigidbody2D _rigid;
+    const float JumpForce = 20f;
     protected override Status OnStart()
     {
+        _rigid = Self.Value.GetComponent<Rigidbody2D>();
         return Status.Running;
     }
 
     protected override Status OnUpdate()
     {
+        _rigid.AddForce(Vector2.up * JumpForce , ForceMode2D.Impulse);
         return Status.Success;
     }
 
