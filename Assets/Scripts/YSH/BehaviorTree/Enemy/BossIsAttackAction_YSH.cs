@@ -5,13 +5,10 @@ using Action = Unity.Behavior.Action;
 using Unity.Properties;
 
 [Serializable, GeneratePropertyBag]
-[NodeDescription(name: "UpdateBossIsGround", story: "Update is [Self] is [_IsGround]", category: "Action", id: "5826be695ed409a8778554daf3183c96")]
-public partial class UpdateBossIsGroundAction_YSH : Action
+[NodeDescription(name: "BossIsAttack_YSH", story: "[Self] is Attack", category: "Action", id: "dca7f77f5faa479600ca5ddb6c683d41")]
+public partial class BossIsAttackAction_YSH : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Self;
-    [SerializeReference] public BlackboardVariable<bool> IsGround;
-
-
 
     protected override Status OnStart()
     {
@@ -20,16 +17,12 @@ public partial class UpdateBossIsGroundAction_YSH : Action
 
     protected override Status OnUpdate()
     {
+        Debug.Log("공격 상태 입니다.");
         return Status.Success;
     }
 
     protected override void OnEnd()
     {
-    }
-
-    void isGrounded()
-    {
-        
     }
 }
 

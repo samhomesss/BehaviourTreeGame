@@ -4,8 +4,8 @@ using Unity.Behavior;
 [BlackboardEnum]
 public enum BossGroundState
 {
+    Dash,
+    Attack,
     Idle,
-	Attack,
-	Dash,
 	Jump
 }
