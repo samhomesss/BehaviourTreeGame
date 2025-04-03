@@ -2,8 +2,9 @@ using System;
 using Unity.Behavior;
 
 [BlackboardEnum]
-public enum test
+public enum currentState
 {
-    idle,
-	run
+    Idle,
+	Run,
+	Attack
 }
