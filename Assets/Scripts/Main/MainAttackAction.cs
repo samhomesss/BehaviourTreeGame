@@ -18,8 +18,8 @@ public partial class MainAttackAction : Action
         _animator = Self.Value.GetComponent<Animator>();
 
         //////////////////  Warning  /////////////////
-        // �ִϸ��̼� ��Ī�� ���ڿ��� �״�� ���� ������
-        // �޸տ��� �����ؾ��մϴ�.
+        // 애니메이션 명칭이 문자열로 그대로 들어가기 때문에
+        // 휴먼에러 조심해야합니다.
         Debug.Log(CurrentState.Value.ToString());
         _animationHash = Animator.StringToHash(CurrentState.Value.ToString());
         //////////////////  Warning  /////////////////
@@ -29,8 +29,8 @@ public partial class MainAttackAction : Action
 
     protected override Status OnUpdate()
     {
-        // �ִϸ��̼� ���̰� Success�� Ʈ���Ű� �˴ϴ�.
-        // ���� Attack �ִϸ��̼��� Exit�� �������־�� �մϴ�.
+        // 애니메이션 길이가 Success의 트리거가 됩니다.
+        // 따라서 Attack 애니메이션은 Exit로 연결해주어야 합니다.
         if (_animationHash == _animator.GetCurrentAnimatorStateInfo(0).shortNameHash)
         {
             return Status.Running;
@@ -39,6 +39,12 @@ public partial class MainAttackAction : Action
         {
             return Status.Success;
         }
+    }
+
+    protected override void OnEnd()
+    {
+        // 애니메이션 종료 후 Idle로 전환
+        Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("CurrentState", MainBossState.IDLE);
     }
 }
 
