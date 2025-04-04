@@ -40,5 +40,11 @@ public partial class MainAttackAction : Action
             return Status.Success;
         }
     }
+
+    protected override void OnEnd()
+    {
+        // 애니메이션 종료 후 Idle로 전환
+        Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("CurrentState", MainBossState.IDLE);
+    }
 }
 
