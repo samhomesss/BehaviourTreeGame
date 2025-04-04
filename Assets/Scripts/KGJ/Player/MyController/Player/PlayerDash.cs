@@ -102,7 +102,6 @@ public class PlayerDash : MonoBehaviour
     {
         yield return new WaitForSeconds(_dashCooldown);
         _haveDashChance = true;
-        Debug.Log("대시 기회 리필됨");
     }
 
     IEnumerator SpawnShadows()

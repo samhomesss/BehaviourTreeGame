@@ -24,6 +24,7 @@ public class InputManager
     InputAction _moveAction; // 움직임 Action
     InputAction _jumpAction; // 점프 Action
     InputAction _dashAction; // 대시 Action
+    InputAction _attackAction;
 
     Vector2 _moveVector; // 움직인 값을 받아 오기 위한 벡터 
     bool _isMove; // 현재 움직이는가?
@@ -33,6 +34,8 @@ public class InputManager
     public Action OnJumpEvent; // Jump 되었을때 Action 실행 
     public Action OnJumpCutEvent; // OnJumpCut Action
     public Action OnDashEvent; // Dash 키 인풋 시 Action 실행
+    public Action OnAttackEvent;
+
     public void Init()
     {
         _myPlayerInputSystem = new InputSystem_Actions(); // 내 InputSystem 가져옴
@@ -41,11 +44,13 @@ public class InputManager
         _moveAction = _myPlayerInputSystem.MyPlayer.Move; // 내 InputSystem에서 해당 Action이 어떤 액션 을 참조하는지 
         _jumpAction = _myPlayerInputSystem.MyPlayer.Jump;
         _dashAction = _myPlayerInputSystem.MyPlayer.Dash;
+        _attackAction = _myPlayerInputSystem.MyPlayer.Attack;
         
         _myPlayerInputSystem.MyPlayer.Enable();
         _moveAction.Enable(); // 연결 
         _jumpAction.Enable();
         _dashAction.Enable();
+        _attackAction.Enable();
 
         _moveAction.performed += OnMove; // 어떤 함수 실행일지 연결 
         _moveAction.canceled += OnMove;
@@ -54,6 +59,8 @@ public class InputManager
         _jumpAction.canceled += OnJump;
 
         _dashAction.performed += OnDash;
+
+        _attackAction.performed += OnAttack;
 
         _isJumpCut = false;
 
@@ -99,6 +106,11 @@ public class InputManager
         OnDashEvent?.Invoke();
     }
 
+    void OnAttack(InputAction.CallbackContext context)
+    {
+        OnAttackEvent?.Invoke();
+    }
+
     /// <summary>
     /// 플레이어가 죽었을때 실행 시킬 Clear
     /// </summary>
@@ -107,6 +119,7 @@ public class InputManager
         _moveAction.Disable();
         _jumpAction.Disable();
         _dashAction.Disable();
+        _attackAction.Disable();
 
         _myPlayerInputSystem.MyPlayer.Disable();
         OnJumpEvent = null;

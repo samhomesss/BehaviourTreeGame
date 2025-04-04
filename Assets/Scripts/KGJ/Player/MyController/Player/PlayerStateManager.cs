@@ -62,6 +62,25 @@ public class PlayerStateManager : MonoBehaviour
         }
     }
 
+    public static bool IsAttacking
+    {
+        get { return Instance._isAttacking; }
+        set { Instance._isAttacking = value; }
+    }
+
+
+    public static int Combo
+    {
+        get { return Instance._combo; }
+        set { Instance._combo = value; }
+    }
+
+    public static bool IsAttackCooltime
+    {
+        get { return Instance._isAttackCooltime; }
+        set { Instance._isAttackCooltime = value; }
+    }
+
     Rigidbody2D _playerRigid;
     float _playerSpeed = 14.5f;//9.5f; // 플레이어 Max Speed 에 가깝다.
     float _playerJumpPower = 30f;
@@ -79,6 +98,10 @@ public class PlayerStateManager : MonoBehaviour
     bool _isDashing = false;
 
     bool _filpX = false;
+
+    bool _isAttacking = false;
+    int _combo = 0;
+    bool _isAttackCooltime = false;
 
     private void Awake()
     {

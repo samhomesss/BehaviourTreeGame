@@ -11,19 +11,26 @@ public class PlayerAnimator : MonoBehaviour
 
     void Update()
     {
-        if (PlayerStateManager.IsDashing)
+        
+        if (!PlayerStateManager.IsAttackCooltime && PlayerStateManager.IsAttacking)
+        {
+            _animator.Play("ATK1");
+            
+            PlayerStateManager.IsAttackCooltime = true;
+        }
+        else if (!PlayerStateManager.IsAttacking && PlayerStateManager.IsDashing)
         {
             _animator.Play("DASH");
         }
-        else if (PlayerStateManager.IsJumping)
+        else if (!PlayerStateManager.IsAttacking &&  PlayerStateManager.IsJumping)
         {
             _animator.Play("JUMP");
         }
-        else if (!PlayerStateManager.IsJumping && Managers.InputManager.IsMove)
+        else if (!PlayerStateManager.IsAttacking &&  !PlayerStateManager.IsJumping && Managers.InputManager.IsMove)
         {
             _animator.Play("RUN");
         }
-        else if (!PlayerStateManager.IsJumping && !Managers.InputManager.IsMove)
+        else if (!PlayerStateManager.IsAttacking &&  !PlayerStateManager.IsJumping && !Managers.InputManager.IsMove)
         {
             _animator.Play("IDLE");
         }
