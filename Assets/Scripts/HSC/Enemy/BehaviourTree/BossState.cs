@@ -5,5 +5,6 @@ public enum BossState
 {
     Run,
 	Idle,
-    Attack
+    Attack,
+    Jump
 }
