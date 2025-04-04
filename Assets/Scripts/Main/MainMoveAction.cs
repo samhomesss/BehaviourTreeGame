@@ -33,6 +33,7 @@ public partial class MainMoveAction : Action
 
     protected override void OnEnd()
     {
+        _rigidbody.linearVelocity = Vector2.zero;
     }
 }
 
