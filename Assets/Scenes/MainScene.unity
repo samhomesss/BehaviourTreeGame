@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 186481803}
   - component: {fileID: 186481805}
   - component: {fileID: 186481804}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!70 &186481800
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 1011900468}
   - component: {fileID: 1011900467}
   - component: {fileID: 1011900466}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}

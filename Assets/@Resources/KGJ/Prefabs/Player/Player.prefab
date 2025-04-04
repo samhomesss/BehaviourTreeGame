@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3443825935066834083}
   - component: {fileID: 7355515424273703396}
   - component: {fileID: 6621542177602538724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4695052694343793249}
   - component: {fileID: 486289170187515373}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerGroundCheckPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
