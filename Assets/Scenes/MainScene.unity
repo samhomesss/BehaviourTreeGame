@@ -253,6 +253,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1048463220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2331395187402205944, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+  m_PrefabInstance: {fileID: 1270687902482164082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1117419304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,9 +522,67 @@ PrefabInstance:
       value: MainBoss
       objectReference: {fileID: 0}
     - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_Graph
+      value: 
+      objectReference: {fileID: -3216686334271596218, guid: 786b8f1cb853db845879e9b467d0f138, type: 2}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: 'managedReferences[3825597982118510717]'
+      value: 'Unity.Behavior Unity.Behavior.BlackboardVariable`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: 'managedReferences[3825597982118510718]'
+      value: 'Unity.Behavior Unity.Behavior.BlackboardVariable`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[3825597982118510717].Name
+      value: Self
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[3825597982118510718].Name
+      value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_BlackboardVariableOverridesList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: managedReferences[3825597975434362899].m_Value
       value: 
       objectReference: {fileID: 1920845862}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[3825597982118510717].m_Value
+      value: 
+      objectReference: {fileID: 1048463220}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[3825597982118510718].m_Value
+      value: 
+      objectReference: {fileID: 1920845862}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: 'm_BlackboardVariableOverridesList.Array.data[0]'
+      value: 3825597982118510717
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: 'm_BlackboardVariableOverridesList.Array.data[1]'
+      value: 3825597982118510718
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[3825597982118510717].GUID.m_Value0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[3825597982118510717].GUID.m_Value1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[3825597982118510718].GUID.m_Value0
+      value: 4648282155540283225
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[3825597982118510718].GUID.m_Value1
+      value: 1779941618204458252
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
