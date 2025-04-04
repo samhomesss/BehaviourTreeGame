@@ -18,10 +18,10 @@ public partial class MainAttackAction : Action
         _animator = Self.Value.GetComponent<Animator>();
 
         //////////////////  Warning  /////////////////
-        // ¾Ö´Ï¸ÞÀÌ¼Ç ¸íÄªÀÌ ¹®ÀÚ¿­·Î ±×´ë·Î µé¾î°¡±â ¶§¹®¿¡
-        // ÈÞ¸Õ¿¡·¯ Á¶½ÉÇØ¾ßÇÕ´Ï´Ù.
-        Debug.Log("attack");
-        _animationHash = Animator.StringToHash("Attack1");
+        // ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½Äªï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½×´ï¿½ï¿½ ï¿½ï¿½î°¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        // ï¿½Þ¸Õ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ï¿½Õ´Ï´ï¿½.
+        Debug.Log(CurrentState.Value.ToString());
+        _animationHash = Animator.StringToHash(CurrentState.Value.ToString());
         //////////////////  Warning  /////////////////
 
         return Status.Running;
@@ -29,8 +29,8 @@ public partial class MainAttackAction : Action
 
     protected override Status OnUpdate()
     {
-        // ¾Ö´Ï¸ÞÀÌ¼Ç ±æÀÌ°¡ SuccessÀÇ Æ®¸®°Å°¡ µË´Ï´Ù.
-        // µû¶ó¼­ Attack ¾Ö´Ï¸ÞÀÌ¼ÇÀº Exit·Î ¿¬°áÇØÁÖ¾î¾ß ÇÕ´Ï´Ù.
+        // ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ Successï¿½ï¿½ Æ®ï¿½ï¿½ï¿½Å°ï¿½ ï¿½Ë´Ï´ï¿½.
+        // ï¿½ï¿½ï¿½ï¿½ Attack ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ Exitï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
         if (_animationHash == _animator.GetCurrentAnimatorStateInfo(0).shortNameHash)
         {
             return Status.Running;
