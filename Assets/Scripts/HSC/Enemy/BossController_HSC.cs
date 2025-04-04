@@ -1,6 +1,9 @@
 using Unity.Behavior;
 using UnityEngine;
 
+/// <summary>
+/// 보스 오브젝트에 컴포넌트로 추가해주시면 됩니다.
+/// </summary>
 public class BossController_HSC : MonoBehaviour
 {
     private BehaviorGraphAgent _behaviorGraphAgent;
@@ -16,7 +19,9 @@ public class BossController_HSC : MonoBehaviour
                 _currentState = value;
                 
                 // 애니메이션 이름과 상태 이름이 같다고 가정
-                _animator.Play(value.ToString());
+                // 아래 주석 처리한 부분에 애니메이션 트리거를 설정해주시면 됩니다.
+                // 상태 이름과 애니메이션 이름이 다를경우 에러발생하므로 일단 주석처리해두었습니다.
+                //_animator.Play(value.ToString());
             }
         }
     }
