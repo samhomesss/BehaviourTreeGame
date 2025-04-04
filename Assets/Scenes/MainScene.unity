@@ -132,8 +132,10 @@ GameObject:
   - component: {fileID: 186481800}
   - component: {fileID: 186481799}
   - component: {fileID: 186481803}
+  - component: {fileID: 186481805}
+  - component: {fileID: 186481804}
   m_Layer: 0
-  m_Name: Frame_0
+  m_Name: MainBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,10 +287,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Graph: {fileID: -1636986153953542008, guid: faa2815c678e98d458215522340fd28e, type: 2}
+  m_Graph: {fileID: -3216686334271596218, guid: b2388d127ecd0d24f9911947ab09eeab, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 3825597973988377423
-  - rid: 3825597973988377424
+  - rid: 3825597975434362899
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -302,14 +304,48 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 186481798}
-    - rid: 3825597973988377424
+    - rid: 3825597975434362899
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 11080851558087335461
-          m_Value1: 16042472880542546827
+          m_Value0: 4648282155540283225
+          m_Value1: 1779941618204458252
         Name: Target
         m_Value: {fileID: 1920845862}
+--- !u!95 &186481804
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186481798}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b5c0b91693ab53943b3c5feaeef15c48, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &186481805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186481798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee98228bddcfca244bc99a2e89d4bc36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1011900465
 GameObject:
   m_ObjectHideFlags: 0

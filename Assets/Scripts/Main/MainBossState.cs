@@ -7,6 +7,6 @@ public enum MainBossState
     Idle,
 	Move,
 	Run,
-	Attack,
+	Attack1,
 	Util
 }

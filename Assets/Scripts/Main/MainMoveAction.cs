@@ -9,7 +9,6 @@ using Unity.Properties;
 public partial class MainMoveAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Self;
-    [SerializeReference] public BlackboardVariable<bool> IsFaceLeft;
     [SerializeReference] public BlackboardVariable<float> MoveSpeed;
     Rigidbody2D _rigidbody;
 
@@ -21,11 +20,11 @@ public partial class MainMoveAction : Action
 
     protected override Status OnUpdate()
     {
-        if (IsFaceLeft)
+        if (_rigidbody.transform.localScale.x < 0)
         {
             _rigidbody.linearVelocity = new Vector2(1, 0) * MoveSpeed;
         }
-        else
+        else if (_rigidbody.transform.localScale.x > 0)
         {
             _rigidbody.linearVelocity = new Vector2(-1, 0) * MoveSpeed;
         }
