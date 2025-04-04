@@ -9,7 +9,7 @@ public class BossTreeInit_KYH : MonoBehaviour
     private Animator animator;
     private BehaviorGraphAgent behaviorAgent;
     private Rigidbody2D rb;
-    private currentState cs;
+    //private currentState cs;
     
     
 
@@ -25,9 +25,9 @@ public class BossTreeInit_KYH : MonoBehaviour
     {
         
         behaviorAgent.SetVariableValue("rb", rb);
-        behaviorAgent.GetVariable("currentState", out BlackboardVariable<currentState> cs); 
-        this.cs = cs.Value;
-        cs.Value = currentState.Idle;
+        //behaviorAgent.GetVariable("currentState", out BlackboardVariable<currentState> cs); 
+        //this.cs = cs.Value;
+        //cs.Value = currentState.Idle;
         
         behaviorAgent.SetVariableValue("anim", animator);
         behaviorAgent.SetVariableValue("Target", target);

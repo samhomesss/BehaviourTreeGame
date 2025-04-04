@@ -26,6 +26,7 @@ public enum MainBossState
 	THROW,
 	WALL_CONTACT,
 	WALL_JUMP,
-	WALL_SLIDE
+	WALL_SLIDE,
+	KUNAI
 	
 }

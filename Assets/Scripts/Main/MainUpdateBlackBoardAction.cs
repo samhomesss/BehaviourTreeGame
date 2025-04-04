@@ -23,12 +23,12 @@ public partial class MainUpdateBlackBoardAction : Action
         // Filp
         _direction = Target.Value.transform.position.x - Self.Value.transform.position.x;
         if (_direction > 0)
-            Self.Value.transform.localScale = new Vector3(-1, 1, 1);
+            Self.Value.GetComponent<SpriteRenderer>().flipX = false;
         else
-            Self.Value.transform.localScale = new Vector3(1, 1, 1);
+            Self.Value.GetComponent<SpriteRenderer>().flipX = true;
 
 
-        // Áú¹® : ¿©±â Success·Î ÇØµµ »ó°ü¾ø³ª¿ä ¾îÂ÷ÇÇ repeat·Î °è¼Ó µµ´Ï±î?
+        // ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ Successï¿½ï¿½ ï¿½Øµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ repeatï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½?
         return Status.Success;
     }
 }
