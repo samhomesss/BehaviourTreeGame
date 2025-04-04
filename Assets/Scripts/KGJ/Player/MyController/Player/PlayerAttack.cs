@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    float _bufferTime = 0.3f;
+    const float BUFFER_TIME = 0.2f;
     float _bufferTimer = 0f;
     bool _attackBuffered = false;
 
@@ -13,18 +13,26 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        if (_bufferTimer > 0)
+        if (_bufferTimer <= 0)
         {
-            _bufferTimer -= Time.deltaTime;
-            if (_bufferTimer <= 0)
-            {
-                _attackBuffered = false; // 버퍼 타임이 끝나면 입력 무효화
-            }
+            _attackBuffered = false;
+            PlayerStateManager.Combo = 0;
+
+            return;
         }
+        _bufferTimer -= Time.deltaTime;
+
     }
 
     void Attack()
     {
+        if (PlayerStateManager.IsAttackCooltime)
+        {
+            _attackBuffered = true;
+            _bufferTimer = BUFFER_TIME;
+            return;
+        }
+
         PlayerStateManager.IsAttacking = true;
         PlayerStateManager.IsAttackCooltime = false;
     }
@@ -33,6 +41,20 @@ public class PlayerAttack : MonoBehaviour
     {
         PlayerStateManager.IsAttacking = false;
         PlayerStateManager.IsAttackCooltime = false;
+
+        if (_attackBuffered)
+        {
+            Attack();
+        }
+
+        if (PlayerStateManager.Combo == 2)
+        {
+            PlayerStateManager.Combo = 0;
+        }
+        else
+        {
+            PlayerStateManager.Combo++;
+        }
     }
 
     void OnDisable()

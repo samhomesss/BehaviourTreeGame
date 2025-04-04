@@ -14,8 +14,13 @@ public class PlayerAnimator : MonoBehaviour
         
         if (!PlayerStateManager.IsAttackCooltime && PlayerStateManager.IsAttacking)
         {
-            _animator.Play("ATK1");
-            
+            if (PlayerStateManager.Combo == 0)
+                _animator.Play("ATK1");
+            else if (PlayerStateManager.Combo == 1)
+                _animator.Play("ATK2");
+            else if (PlayerStateManager.Combo == 2)
+                _animator.Play("ATK3");
+
             PlayerStateManager.IsAttackCooltime = true;
         }
         else if (!PlayerStateManager.IsAttacking && PlayerStateManager.IsDashing)
