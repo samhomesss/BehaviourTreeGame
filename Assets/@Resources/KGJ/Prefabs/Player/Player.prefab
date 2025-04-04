@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3259363915279225763}
   - component: {fileID: 3443825935066834083}
   - component: {fileID: 7355515424273703396}
+  - component: {fileID: 4557713769718011862}
   - component: {fileID: 6621542177602538724}
   m_Layer: 8
   m_Name: Player
@@ -235,6 +236,18 @@ MonoBehaviour:
   JumpBufferTime: 0.05
   FallGravityMultiplier: 1.5
   MaxFallSpeed: 25
+--- !u!114 &4557713769718011862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092360975250361718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8b45cce2db73d42a14a4cecee7f385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6621542177602538724
 MonoBehaviour:
   m_ObjectHideFlags: 0
