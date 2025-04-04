@@ -41,8 +41,10 @@ public partial class BossDashToPlayerAction_YSH : Action
         {
             _rigid.linearVelocity = Vector2.zero;
             _rigid.angularVelocity = 0f;
+
             return Status.Success;
         }
+
         return Status.Running;
     }
 

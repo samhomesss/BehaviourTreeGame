@@ -492,13 +492,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3242945550770240328, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3242945550770240328, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: ce917029fa805164fbcf843f0c30c990, type: 2}
+    - target: {fileID: 3242945550770240328, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4685108882246724244, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4685108882246724244, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.69
       objectReference: {fileID: 0}
     - target: {fileID: 4685108882246724244, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -538,20 +550,37 @@ PrefabInstance:
         Assembly-CSharp]]'
       objectReference: {fileID: 0}
     - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
+      propertyPath: 'managedReferences[7522123059912770364]'
+      value: 'Unity.Behavior Unity.Behavior.BlackboardVariable`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
       propertyPath: managedReferences[7522123050937483844].Name
       value: BossGroundState
       objectReference: {fileID: 0}
     - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
+      propertyPath: managedReferences[7522123059912770364].Name
+      value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
       propertyPath: m_BlackboardVariableOverridesList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
       propertyPath: managedReferences[7522123050937483844].m_Value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
+      propertyPath: managedReferences[7522123059912770364].m_Value
+      value: 
+      objectReference: {fileID: 6969460406451649686}
+    - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
       propertyPath: 'm_BlackboardVariableOverridesList.Array.data[1]'
       value: 7522123050937483844
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
+      propertyPath: 'm_BlackboardVariableOverridesList.Array.data[2]'
+      value: 7522123059912770364
       objectReference: {fileID: 0}
     - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
       propertyPath: managedReferences[7522123050937483844].GUID.m_Value0
@@ -560,6 +589,14 @@ PrefabInstance:
     - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
       propertyPath: managedReferences[7522123050937483844].GUID.m_Value1
       value: 15448476967649332321
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
+      propertyPath: managedReferences[7522123059912770364].GUID.m_Value0
+      value: 14852294225601060172
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124940866568612410, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
+      propertyPath: managedReferences[7522123059912770364].GUID.m_Value1
+      value: 10309965553321097662
       objectReference: {fileID: 0}
     - target: {fileID: 8871686523144926301, guid: 0948df0afe1c3904f97eecc25e0152d7, type: 3}
       propertyPath: m_Name
