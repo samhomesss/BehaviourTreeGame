@@ -4,9 +4,28 @@ using Unity.Behavior;
 [BlackboardEnum]
 public enum MainBossState
 {
-    Idle,
-	Move,
-	Run,
-	Attack1,
-	Util
+	IDLE,
+	WALK,
+	RUN,
+	ATTACK_1,
+	ATTACK_2,
+	ATTACK_3,
+	ATTACK_AIR,
+	ATTACK_SPECIAL,
+	CLIMBING,
+	DASH,
+	DEATH,
+	DEFEND,
+	HEALING,
+	HEALING_NOEFFECT,
+	HURT,
+	JUMP,
+	JUMP_FALL,
+	JUMP_START,
+	JUMP_TRANSITION,
+	THROW,
+	WALL_CONTACT,
+	WALL_JUMP,
+	WALL_SLIDE
+	
 }
