@@ -46,14 +46,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 3
-    - rid: 3825597992608203429
-      type: {class: 'BlackboardVariable`1[[MainBossState, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 3
     - rid: 3825597992608203430
       type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -296,7 +288,7 @@ MonoBehaviour:
           rid: 3825597993949069415
         m_EndedNodes:
           rid: 3825597993949069416
-        m_VersionTimestamp: 638794555663593580
+        m_VersionTimestamp: 638794557549630805
     - rid: 3825597993949069413
       type: {class: ParallelAllComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -452,7 +444,7 @@ MonoBehaviour:
         m_Children:
         - rid: 3825597993949069437
         - rid: 3825597993949069438
-        - rid: 3825597993949069439
+        - rid: -2
     - rid: 3825597993949069429
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -596,22 +588,6 @@ MonoBehaviour:
           rid: 3825597993949069423
         Value:
           rid: 3825597992608203428
-    - rid: 3825597993949069439
-      type: {class: BossSwordForcePatternAction_YSH, ns: , asm: Assembly-CSharp}
-      data:
-        ID:
-          m_Value0: 3185668093845892264
-          m_Value1: 6497117756487933231
-        Graph:
-          rid: 3825597993949069412
-        m_Parent:
-          rid: 3825597993949069428
-        Self:
-          rid: 3825597993949069422
-        CurrentState:
-          rid: 3825597992608203429
-        BossSwordForcePos:
-          rid: 3825597993949069426
     - rid: 3825597993949069440
       type: {class: CooldownModifier, ns: Unity.Behavior, asm: Unity.Behavior}
       data:

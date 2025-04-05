@@ -27,6 +27,6 @@ public enum MainBossState
 	WALL_CONTACT,
 	WALL_JUMP,
 	WALL_SLIDE,
-	KUNAI
-	
+	KUNAI,
+	ATTACK_RHYTHM
 }
