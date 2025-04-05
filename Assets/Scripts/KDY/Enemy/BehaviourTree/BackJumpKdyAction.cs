@@ -52,7 +52,7 @@ public partial class BackJumpKdyAction : Action
     protected override Status OnUpdate()
     {
         // 점프 진행 상황 판단
-        float yDiff = Mathf.Abs(Self.Value.transform.position.y - _startPos.y);
+        float yDiff = Self.Value.transform.position.y- _startPos.y;
         if (yDiff < 0.1f && Mathf.Abs(_rb.linearVelocity.y) < 0.1f)
         {
             // 착지 완료, 점프 종료
