@@ -42,7 +42,7 @@ public partial class BackJumpKdyAction : Action
         // 초기 점프 속도(벡터) 계산  
         float vx = _jumpSpeed * Mathf.Cos(radAngle) * backwardDir.x;
         float vy = _jumpSpeed * Mathf.Sin(radAngle);
-        _jumpVelocity = new Vector2(vx, vy);
+        _jumpVelocity = new Vector2(vx*2, vy/2);
         
         _rb.linearVelocity = _jumpVelocity;
         
@@ -53,6 +53,10 @@ public partial class BackJumpKdyAction : Action
     {
         // 점프 진행 상황 판단
         float yDiff = Self.Value.transform.position.y- _startPos.y;
+        if (_rb.linearVelocityY < 0)
+        {
+            _rb.gravityScale = 4f;
+        }
         if (yDiff < 0.1f && Mathf.Abs(_rb.linearVelocity.y) < 0.1f)
         {
             // 착지 완료, 점프 종료
@@ -68,6 +72,7 @@ public partial class BackJumpKdyAction : Action
         if (_rb != null)
         {
             _rb.linearVelocity = Vector2.zero;
+            _rb.gravityScale = 1f;
         }
     }
 }
