@@ -31,5 +31,7 @@ public enum MainBossState
 	WALL_JUMP,
 	WALL_SLIDE,
 	KUNAI,
-	ATTACK_RHYTHM
+	ATTACK_RHYTHM,
+	RASENGAN
+
 }
