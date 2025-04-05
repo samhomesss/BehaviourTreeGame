@@ -12,10 +12,6 @@ public class BossAnimationEventController : MonoBehaviour
     {
         _player = FindAnyObjectByType<PlayerStateManager>();
         _colliders = FindObjectsByType<PolygonCollider2D>(FindObjectsSortMode.None);
-        foreach (var collider in _colliders)
-        {
-            Debug.Log(collider.ToString());
-        }
     }
 
     private void Update()

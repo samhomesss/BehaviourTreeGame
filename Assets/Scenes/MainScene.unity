@@ -785,6 +785,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 746461558244069183, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739217939760040733, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1915832097999717245, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.39
@@ -829,10 +837,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 2624140973452944628, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4358952591079015032, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: managedReferences[3825597992608203171].m_Value
       value: 
       objectReference: {fileID: 1920845862}
+    - target: {fileID: 8327302354520743862, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8522385316860306322, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623963164019803335, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
