@@ -12,7 +12,7 @@ public partial class BossSwordForcePatternAction_YSH : Action
     [SerializeReference] public BlackboardVariable<GameObject> Self;
     [SerializeReference] public BlackboardVariable<MainBossState> CurrentState;
     [SerializeReference] public BlackboardVariable<List<Vector2>> BossSwordForcePos;
-
+    //Todo: 검기패턴 백스텝 뒤로 할거면 위치만 빼면 됨 -> 추후 작업 보고 결정 
     BossInstanctiateSwordForce _instanceSword;
 
     float _timer = 0;

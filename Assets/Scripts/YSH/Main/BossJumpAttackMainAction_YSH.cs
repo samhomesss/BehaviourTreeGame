@@ -13,9 +13,9 @@ public partial class BossJumpAttackMainAction_YSH : Action
 
     const float JumpHeight = 1.5f; // 점프 높이 
     const float JumpSpeed = 0.05f; // 올라가는 속도
-    const float FallSpeed = 0.07f;  // 떨어지는 속도 
+    const float FallSpeed = 0.02f;  // 떨어지는 속도 
     const float JumpDuration = 5f; // Duration
-    const float FallDuration = 3f; // Duration
+    const float FallDuration = 8f; // Duration
 
     Vector2 _jumpStartTargetPos; // 점프 시작할때 플레이어 머리 위로 이동할 변수 
     Vector2 _jumpAttackTarget; // 떨어지는 지점 
@@ -39,10 +39,9 @@ public partial class BossJumpAttackMainAction_YSH : Action
 
     protected override Status OnUpdate()
     {
-        _jumpStartTargetPos = new Vector2(player.transform.position.x, JumpHeight); // 포지션을 계속 변경 하기 위함
-
         if (!_isFalling) // 올라가는 상태
         {
+            _jumpStartTargetPos = new Vector2(player.transform.position.x, JumpHeight); // 포지션을 계속 변경 하기 위함
             UpdateJumpPhase();
         }
         else // 내려가는 상태 

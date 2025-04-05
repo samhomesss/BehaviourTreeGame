@@ -11,8 +11,7 @@ public class BossInstanctiateSwordForce : MonoBehaviour
 
     public void InstantiateSword()
     {
-        Debug.Log("°Ë±â »ý¼ºµÊ");
-
-        Instantiate(_swordForcePrefab, (Vector2)transform.position + Vector2.up , Quaternion.identity);
+        GameObject go = Instantiate(_swordForcePrefab, (Vector2)transform.position + Vector2.up , Quaternion.identity);
+        Destroy(go, 4f);
     }
 }
