@@ -17,6 +17,7 @@ public partial class RhythmAttackKgjAction : Action
     {
         _animator = Self.Value.GetComponent<Animator>();
         _animationHash = Animator.StringToHash(CurrentState.Value.ToString());
+        Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("IsAttacking", true);
         return Status.Running;
     }
 
@@ -36,6 +37,7 @@ public partial class RhythmAttackKgjAction : Action
 
     protected override void OnEnd()
     {
+        Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("IsAttacking", false);
         Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("CurrentState", MainBossState.IDLE);
     }
 }
