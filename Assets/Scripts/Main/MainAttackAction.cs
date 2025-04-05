@@ -16,7 +16,7 @@ public partial class MainAttackAction : Action
     protected override Status OnStart()
     {
         _animator = Self.Value.GetComponent<Animator>();
-
+        Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("IsAttacking", true);
         //////////////////  Warning  /////////////////
         // 애니메이션 명칭이 문자열로 그대로 들어가기 때문에
         // 휴먼에러 조심해야합니다.
@@ -43,6 +43,7 @@ public partial class MainAttackAction : Action
 
     protected override void OnEnd()
     {
+        Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("IsAttacking", false);
         // 애니메이션 종료 후 Idle로 전환
         Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("CurrentState", MainBossState.IDLE);
     }
