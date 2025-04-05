@@ -12,6 +12,9 @@ public partial class MainUpdateBlackBoardAction : Action
     [SerializeReference] public BlackboardVariable<GameObject> Target;
     [SerializeReference] public BlackboardVariable<float> CurrentDirection;
     [SerializeReference] public BlackboardVariable<bool> IsAttacking;
+
+    Vector3 _localScale;
+
     protected override Status OnStart()
     {
         return Status.Running;
@@ -24,9 +27,9 @@ public partial class MainUpdateBlackBoardAction : Action
         if(!IsAttacking.Value)
         {
             if (CurrentDirection.Value > 0)
-                Self.Value.GetComponent<SpriteRenderer>().flipX = false;
+                Self.Value.transform.localScale = new Vector3(-1.3f,1.3f,1f);
             else
-                Self.Value.GetComponent<SpriteRenderer>().flipX = true;
+                Self.Value.transform.localScale = new Vector3(1.3f,1.3f,1f);
         }
 
         return Status.Success;
