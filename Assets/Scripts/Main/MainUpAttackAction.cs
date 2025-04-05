@@ -23,6 +23,7 @@ public partial class MainUpAttackAction : Action
         _animationHash = Animator.StringToHash(CurrentState.Value.ToString());
         _rb = Self.Value.GetComponent<Rigidbody2D>();
 
+        Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("IsAttacking", true);
         if (CurrentDirection.Value > 0)
         {
             dir = new Vector2(1f, 11f);
@@ -57,6 +58,7 @@ public partial class MainUpAttackAction : Action
 
     protected override void OnEnd()
     {
+        Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("IsAttacking", false);
         Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("CurrentState", MainBossState.IDLE);
     }
 }
