@@ -12,8 +12,6 @@ public partial class MainAttackAction : Action
     [SerializeReference] public BlackboardVariable<MainBossState> CurrentState;
     private Animator _animator;
     private int _animationHash;
-    private int _attack2Hash;
-    private int _attack3Hash;
 
     protected override Status OnStart()
     {
@@ -24,9 +22,6 @@ public partial class MainAttackAction : Action
         // 휴먼에러 조심해야합니다.
         Debug.Log(CurrentState.Value.ToString());
         _animationHash = Animator.StringToHash(CurrentState.Value.ToString());
-
-        _attack2Hash = Animator.StringToHash("ATTACK_2");
-        _attack3Hash = Animator.StringToHash("ATTACK_3");
         //////////////////  Warning  /////////////////
 
         return Status.Running;
@@ -36,9 +31,7 @@ public partial class MainAttackAction : Action
     {
         // 애니메이션 길이가 Success의 트리거가 됩니다.
         // 따라서 Attack 애니메이션은 Exit로 연결해주어야 합니다.
-        if (_animationHash == _animator.GetCurrentAnimatorStateInfo(0).shortNameHash
-            || _attack2Hash == _animator.GetCurrentAnimatorStateInfo(0).shortNameHash
-            || _attack3Hash == _animator.GetCurrentAnimatorStateInfo(0).shortNameHash)
+        if (_animationHash == _animator.GetCurrentAnimatorStateInfo(0).shortNameHash)
         {
             return Status.Running;
         }
