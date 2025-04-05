@@ -397,7 +397,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2405715256634769240, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.79
       objectReference: {fileID: 0}
     - target: {fileID: 2405715256634769240, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -829,10 +829,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainBoss
       objectReference: {fileID: 0}
-    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
-      propertyPath: managedReferences[3825597982118510718].m_Value
-      value: 
-      objectReference: {fileID: 1920845862}
     - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: managedReferences[3825597992608203171].m_Value
       value: 
