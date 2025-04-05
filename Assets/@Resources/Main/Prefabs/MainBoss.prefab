@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8604644570995274900}
   - component: {fileID: 3860177564108540976}
   - component: {fileID: 7492430366746174407}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Collider_Attack_Air
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,6 +117,8 @@ GameObject:
   - component: {fileID: 1532707073560976441}
   - component: {fileID: 3951496223668309105}
   - component: {fileID: 2860073402026084605}
+  - component: {fileID: 7328769883728206322}
+  - component: {fileID: 8650694712894707914}
   m_Layer: 7
   m_Name: MainBoss
   m_TagString: Untagged
@@ -263,7 +265,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!114 &7150632894982699580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +373,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38bf49ef4a885654e867b5dd255fd400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7328769883728206322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331395187402205944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c596ae799b9c2644d93fc1259517d029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8650694712894707914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331395187402205944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6b60cbfc31c6e4595a4843d0dc83d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 40
 --- !u!1 &2624140973452944628
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +409,7 @@ GameObject:
   - component: {fileID: 6970293584280243666}
   - component: {fileID: 6719101062116104134}
   - component: {fileID: 3083165993188919412}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Collider_Attack3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +508,7 @@ GameObject:
   - component: {fileID: 3750369011946738337}
   - component: {fileID: 3595848368083458572}
   - component: {fileID: 7984240057515793829}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Collider_Attack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +609,7 @@ GameObject:
   - component: {fileID: 9164977747128167263}
   - component: {fileID: 1739217939760040733}
   - component: {fileID: 2701094833700689235}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Collider_Attack1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +709,7 @@ GameObject:
   - component: {fileID: 8056643279085365860}
   - component: {fileID: 123478024814585612}
   - component: {fileID: 7378681016490797352}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Collider_Attack_Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,7 +806,7 @@ GameObject:
   - component: {fileID: 7464624728805848266}
   - component: {fileID: 4214757711425763898}
   - component: {fileID: 1258366220771712105}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Collider_Attack_Special
   m_TagString: Untagged
   m_Icon: {fileID: 0}
