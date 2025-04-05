@@ -25,9 +25,9 @@ public class BossShadowLookPlayer : MonoBehaviour
         {
             transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
         }
-
+       
         GameObject go = Instantiate(_bossShadowStartPrefab, transform.position, Quaternion.identity);
-        Destroy(go, 1f);
+        Destroy(go, 10f);
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class BossShadowLookPlayer : MonoBehaviour
         {
             _dirTimer += Time.deltaTime;
 
-            if (_dirTimer > 5f)
+            if (_dirTimer > 2f)
             {
                 _isAttack = true;
                 _attackDir = dir;
