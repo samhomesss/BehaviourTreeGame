@@ -20,7 +20,7 @@ public partial class BossJumpAttackMainAction_YSH : Action
     Vector2 _jumpStartTargetPos; // 점프 시작할때 플레이어 머리 위로 이동할 변수 
     Vector2 _jumpAttackTarget; // 떨어지는 지점 
     float _timer; // 시간 으로 떨어지는거 계산
-    float _bossOriginalPosY = -3.5f; // 보스를 원래대로 돌리기 위함
+    float _bossOriginalPosY = -3.75f; // 보스를 원래대로 돌리기 위함
     bool _isFalling; // 떨어지는 중
     PlayerStateManager player; // 플레이어 참조 
 
