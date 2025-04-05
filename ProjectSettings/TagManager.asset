@@ -15,8 +15,8 @@ TagManager:
   - Ground
   - Boss
   - Player
-  - 
-  - 
+  - BossAttack
+  - PlayerAttack
   - 
   - 
   - 
