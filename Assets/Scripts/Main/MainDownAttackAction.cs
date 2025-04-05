@@ -5,13 +5,12 @@ using Action = Unity.Behavior.Action;
 using Unity.Properties;
 
 [Serializable, GeneratePropertyBag]
-[NodeDescription(name: "MainUpAttack", story: "[Self] is [CurrentState] with Dir : [CurrentDirection] , Distance : [CurrentDistance]", category: "Action", id: "5520bf1b00118597594351c34c0099bc")]
-public partial class MainUpAttackAction : Action
+[NodeDescription(name: "MainDownAttack", story: "[Self] is [CurrentState] with Dir : [CurrentDirection]", category: "Action", id: "708924b1c9fe533e53a256b51a33ad27")]
+public partial class MainDownAttackAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Self;
     [SerializeReference] public BlackboardVariable<MainBossState> CurrentState;
     [SerializeReference] public BlackboardVariable<float> CurrentDirection;
-    [SerializeReference] public BlackboardVariable<float> CurrentDistance;
     private Animator _animator;
     private int _animationHash;
     private Rigidbody2D _rb;
@@ -25,11 +24,11 @@ public partial class MainUpAttackAction : Action
 
         if (CurrentDirection.Value > 0)
         {
-            dir = new Vector2(1f, 13f);
+            dir = new Vector2(30f, -25f);
         }
         else
         {
-            dir = new Vector2(-1f, 13f);
+            dir = new Vector2(-30f, -25f);
         }
 
         _rb.AddForce(dir, ForceMode2D.Impulse);
@@ -39,12 +38,6 @@ public partial class MainUpAttackAction : Action
 
     protected override Status OnUpdate()
     {
-        if(CurrentDistance.Value > 10f)
-        {
-            // 아래대쉬베기 패턴으로 연결
-            return Status.Failure;
-        }
-
         if (_animationHash == _animator.GetCurrentAnimatorStateInfo(0).shortNameHash)
         {
             return Status.Running;
@@ -57,6 +50,7 @@ public partial class MainUpAttackAction : Action
 
     protected override void OnEnd()
     {
+        _rb.linearVelocity = Vector2.zero;
         Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("CurrentState", MainBossState.IDLE);
     }
 }
