@@ -25,11 +25,11 @@ public partial class MainUpAttackAction : Action
 
         if (CurrentDirection.Value > 0)
         {
-            dir = new Vector2(1f, 13f);
+            dir = new Vector2(1f, 11f);
         }
         else
         {
-            dir = new Vector2(-1f, 13f);
+            dir = new Vector2(-1f, 11f);
         }
 
         _rb.AddForce(dir, ForceMode2D.Impulse);
