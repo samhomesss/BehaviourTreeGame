@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1446361621214831071}
   - component: {fileID: 1532707073560976441}
   - component: {fileID: 3951496223668309105}
+  - component: {fileID: 2860073402026084605}
   m_Layer: 7
   m_Name: MainBoss
   m_TagString: Untagged
@@ -170,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Graph: {fileID: -3216686334271596218, guid: 2786931a3886898498d2122293e9936b, type: 2}
+  m_Graph: {fileID: -3216686334271596218, guid: 786b8f1cb853db845879e9b467d0f138, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 3825597982118510592
   - rid: 3825597992608203171
@@ -251,5 +252,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8024afdcbe2722940a68b797acce6fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2860073402026084605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331395187402205944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38bf49ef4a885654e867b5dd255fd400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
