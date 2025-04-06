@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.Behavior;
 using UnityEngine;
 
 public class PlayerDamagedEffect : MonoBehaviour
@@ -11,6 +10,7 @@ public class PlayerDamagedEffect : MonoBehaviour
     private void Start()
     {
         _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         PlayerHpManger.PlayerHpDamageEvent.OnPlayerDamagedEvent += Die;
         PlayerHpManger.PlayerHpDamageEvent.OnPlayerDamagedEvent += _ => DamagedEffect();
     }
