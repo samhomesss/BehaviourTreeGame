@@ -17,14 +17,13 @@ public class BossSwordForce : MonoBehaviour
         {
             this.transform.localScale = new Vector3(-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
 
-            Debug.Log(transform.localScale);
         }
 
     }
 
     void Update()
     {
-        // Todo: 좆 버그가 있네요 
+        
         transform.Translate(new Vector3(dir.normalized.x, 0, 0) * SWORD_FORCE_SPEED * Time.deltaTime);
         
     }

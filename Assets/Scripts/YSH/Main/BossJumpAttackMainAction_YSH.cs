@@ -34,6 +34,16 @@ public partial class BossJumpAttackMainAction_YSH : Action
         _timer = 0f; // 시간 초기화 
         _isFalling = false; // 아직 안떨어짐 
 
+        Transform _shadowTargetParent;
+
+        _shadowTargetParent = GameObject.FindAnyObjectByType<ShadowPatternTarget>().transform;
+        for (int i = 0; i < _shadowTargetParent.childCount; i++)
+        {
+            Managers.CameraTargetManager.RemoveTarget(_shadowTargetParent.GetChild(i));
+        }
+
+        Managers.CameraTargetManager.AddTarget(Self.Value.transform, 0.5f, 1f);
+
         return Status.Running;
     }
 
@@ -41,6 +51,7 @@ public partial class BossJumpAttackMainAction_YSH : Action
     {
         if (!_isFalling) // 올라가는 상태
         {
+            
             _jumpStartTargetPos = new Vector2(player.transform.position.x, JumpHeight); // 포지션을 계속 변경 하기 위함
             UpdateJumpPhase();
         }

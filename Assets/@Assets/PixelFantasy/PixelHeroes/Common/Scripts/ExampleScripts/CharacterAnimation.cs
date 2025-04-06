@@ -138,7 +138,6 @@ namespace Assets.PixelFantasy.PixelHeroes.Common.Scripts.ExampleScripts
                 default: throw new NotSupportedException(state.ToString());
             }
 
-            //Debug.Log("SetState: " + state);
         }
 
         public CharacterState GetState()

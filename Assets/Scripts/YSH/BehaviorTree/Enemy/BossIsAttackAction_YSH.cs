@@ -17,7 +17,6 @@ public partial class BossIsAttackAction_YSH : Action
 
     protected override Status OnUpdate()
     {
-        Debug.Log("공격 상태 입니다.");
         return Status.Success;
     }
 

@@ -18,7 +18,6 @@ public partial class BossDashToPlayerAction_YSH : Action
     protected override Status OnStart()
     {
         _rigid = Self.Value.GetComponent<Rigidbody2D>();
-        Debug.Log($"Target : {Target.Value}");
         dist = (Vector2)(Target.Value.transform.position - Self.Value.transform.position).normalized;
         _moveStartDir = dist;
         return Status.Running;

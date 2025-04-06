@@ -11,7 +11,7 @@ public class RasenganSpawner : MonoBehaviour
     private GameObject rasenganInstance;
     private BehaviorGraphAgent _behaviorGraphAgent;
     private PlayableDirector pd;
-    
+    private float targetPosX;
     [SerializeField]
     private float _speed = 40f;
     
@@ -32,10 +32,15 @@ public class RasenganSpawner : MonoBehaviour
 
     public void RasenganSpawn()
     {
+        
         //pd.GetComponent<TimelineManager>().PlayTimeline();
         if (_rasengan != null && _boss != null)
         {
-            rasenganInstance = Instantiate(_rasengan, _boss.transform.position + new Vector3(0.21f,4f,0), Quaternion.identity);
+            _behaviorGraphAgent.GetVariable("Target", out BlackboardVariable<GameObject> target);
+            _behaviorGraphAgent.GetVariable("CurrentDirection", out BlackboardVariable<float> dir);
+            targetPosX = target.Value.transform.position.x;
+            if(dir.Value > 0) rasenganInstance = Instantiate(_rasengan, _boss.transform.position + new Vector3(-0.39f,5f,0), Quaternion.identity);
+            if(dir.Value <= 0) rasenganInstance = Instantiate(_rasengan, _boss.transform.position + new Vector3(0.39f,5f,0), Quaternion.identity);
             //rasenganInstance.transform.localScale = new Vector3(0. 1, 1);
         }
         else
@@ -46,27 +51,23 @@ public class RasenganSpawner : MonoBehaviour
 
     public void RasenganAttack()
     {
-        
-        _behaviorGraphAgent.GetVariable("CurrentDirection", out BlackboardVariable<float> dir);
-        _behaviorGraphAgent.GetVariable("Target", out BlackboardVariable<GameObject> target);
-        Debug.Log(dir.Value);
-        StartCoroutine(Dash(target.Value));
+        StartCoroutine(Dash(targetPosX));
     }
 
-    IEnumerator Dash(GameObject target)
+    IEnumerator Dash(float posX)
     {
         //Lerf로 max time 동안 boss와 rasenganInstance의 위치를 lerp로 이동
         Vector3 bossStartPos = _boss.transform.position;
-        Vector3 bossEndPos = new Vector3(target.transform.position.x,bossStartPos.y,0);
+        Vector3 bossEndPos = new Vector3(posX,bossStartPos.y,0);
        
         
         
         float rasenganOffset;
-        if(bossStartPos.x > bossEndPos.x) rasenganOffset = -2.5f;
-        else rasenganOffset = 2.5f;
+        if(bossStartPos.x > bossEndPos.x) rasenganOffset = -4.5f;
+        else rasenganOffset = 4.5f;
         
-        Vector3 rasenganStartPos = new Vector3(rasenganInstance.transform.position.x + rasenganOffset, bossStartPos.y+2, 0);
-        Vector3 rasenganEndPos = new Vector3(target.transform.position.x + rasenganOffset*10,bossStartPos.y+2,0);
+        Vector3 rasenganStartPos = new Vector3(rasenganInstance.transform.position.x + rasenganOffset, bossStartPos.y+2.6f, 0);
+        Vector3 rasenganEndPos = new Vector3(posX + rasenganOffset*10,bossStartPos.y+2,0);
         
         rasenganInstance.transform.position = rasenganStartPos;
         rasenganInstance.GetComponent<Rasengan>().RasenganMoveOn(rasenganEndPos, _speed);
