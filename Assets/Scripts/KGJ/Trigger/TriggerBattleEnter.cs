@@ -35,7 +35,7 @@ public class TriggerBattleEnter : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         _cameraDirector.PlayTimeline(CameraType.Enter);
-        _bossAnimation.GetComponent<Animator>().Play("JUMP-START");
+        
         StartCoroutine(MoveSequence());
 
         StartCoroutine(AddPlayer());
@@ -51,6 +51,8 @@ public class TriggerBattleEnter : MonoBehaviour
 
     IEnumerator MoveSequence()
     {
+        yield return new WaitForSeconds(2f);
+        _bossAnimation.GetComponent<Animator>().Play("JUMP-START");
         // 1단계: 시작 -> 점프 위치로 이동
         yield return StartCoroutine(MoveToPosition(startPos, jumpPos, jumpDuration, true));
 
