@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 292df3672628ea843b1ff454b3a2d055
+guid: d16a1ed94cf257948bc09d589ccd87f2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 792796612984648538
-    second: "\uBC9B\uAF43_0"
+      213: 222744264183196833
+    second: GameStart_0
+  - first:
+      213: -8672829092986280594
+    second: GameStart_1
+  - first:
+      213: -2434797091261346617
+    second: GameStart_2
+  - first:
+      213: -4870696348888844129
+    second: GameStart_3
+  - first:
+      213: 634122622456040259
+    second: GameStart_4
+  - first:
+      213: -879966503991855620
+    second: GameStart_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uBC9B\uAF43_0"
+      name: GameStart_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 470
-        height: 312
+        width: 219
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +156,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a533510b154900b00800000000000000
-      internalID: 792796612984648538
+      spriteID: 1ac25666ab8571300800000000000000
+      internalID: 222744264183196833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameStart_1
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 3
+        width: 116
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6521eaf3ebe3a780800000000000000
+      internalID: -8672829092986280594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameStart_2
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 5
+        width: 96
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc863312fcd53ed0800000000000000
+      internalID: -2434797091261346617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameStart_3
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 5
+        width: 198
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9830bb0a7fc76cb0800000000000000
+      internalID: -4870696348888844129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameStart_4
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 3
+        width: 100
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34b08875a2bdcc800800000000000000
+      internalID: 634122622456040259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameStart_5
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 3
+        width: 193
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5b25b702bb9c3f0800000000000000
+      internalID: -879966503991855620
       vertices: []
       indices: 
       edges: []
@@ -151,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +286,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\uBC9B\uAF43_0": 792796612984648538
+      GameStart_0: 222744264183196833
+      GameStart_1: -8672829092986280594
+      GameStart_2: -2434797091261346617
+      GameStart_3: -4870696348888844129
+      GameStart_4: 634122622456040259
+      GameStart_5: -879966503991855620
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
