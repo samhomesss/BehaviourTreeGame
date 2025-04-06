@@ -1,7 +1,7 @@
 using Unity.Behavior;
 using UnityEngine;
 
-public class PlayerDeath : MonoBehaviour
+public class PlayerDamagedEffect : MonoBehaviour
 {
     private Animator _animator;
 
