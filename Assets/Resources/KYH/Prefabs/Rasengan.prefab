@@ -4865,6 +4865,7 @@ GameObject:
   - component: {fileID: 2411841430932207978}
   - component: {fileID: 7804938534373389581}
   - component: {fileID: 4945737441533826328}
+  - component: {fileID: 352903328849187313}
   m_Layer: 9
   m_Name: Rasengan
   m_TagString: Untagged
@@ -4940,6 +4941,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.0027971268, y: 0.0055944324}
   m_Radius: 0.72657394
+--- !u!114 &352903328849187313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945667717391722829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: "\uB77C\uC13C\uAC04!!"
+  attackDamage: 5
 --- !u!1 &5931138061938882756
 GameObject:
   m_ObjectHideFlags: 0
