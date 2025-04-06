@@ -40,6 +40,7 @@ public class ParallaxRepeatingLayer : MonoBehaviour
             SpriteRenderer spriteRenderer = backgroundInstance.AddComponent<SpriteRenderer>();
             spriteRenderer.sprite = backgroundsSprite;
             spriteRenderer.sortingOrder = sortingOrder; // 정렬 순서 설정
+            spriteRenderer.color = new Color(94f / 255f, 94f / 255f, 94f / 255f, 1f);
 
             // 배경 위치 설정
             Vector3 position = new Vector3(i * spriteWidth, 8, 0);
