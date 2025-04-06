@@ -75,6 +75,7 @@ public class TriggerBattleEnter : MonoBehaviour
         yield return StartCoroutine(MoveToPosition(jumpPos, endPos, fallDuration, false));
         _bossAnimation.SetActive(false);
         _boss.SetActive(true);
+        GetComponent<PolygonCollider2D>().enabled = false;
     }
 
     IEnumerator MoveToPosition(Vector3 from, Vector3 to, float duration, bool isJump)
