@@ -636,8 +636,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 380229861196189267, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1367692402}
   m_SourcePrefab: {fileID: 100100000, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+--- !u!1 &1367692401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 380229861196189267, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+  m_PrefabInstance: {fileID: 1367692400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1367692402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367692401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96d505acb2f98d4b9d1402e32455d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionAudioSource: {fileID: 0}
+  bgmAudioSource: {fileID: 0}
+  basicClickSound: {fileID: 0}
+  basicClickSoundVolume: 0
+  damagedSound: {fileID: 0}
+  damagedSoundVolume: 0
 --- !u!1 &1736633316
 GameObject:
   m_ObjectHideFlags: 0
