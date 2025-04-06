@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5823272721468934098}
   - component: {fileID: 3892598104534389004}
   - component: {fileID: 8790757043260492878}
+  - component: {fileID: 4611734303764865221}
   - component: {fileID: 764987706845598186}
   - component: {fileID: 3259363915279225763}
   - component: {fileID: 3443825935066834083}
@@ -20,6 +21,7 @@ GameObject:
   - component: {fileID: 4557713769718011862}
   - component: {fileID: 6621542177602538724}
   - component: {fileID: 6986949260512308963}
+  - component: {fileID: 2979313325214068008}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -187,6 +189,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.03014034, y: 1.5936409}
   m_Size: {x: 0.8446076, y: 2.1252306}
   m_Direction: 0
+--- !u!114 &4611734303764865221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092360975250361718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fbdca3f8f718e245863fce2e9ddaf20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &764987706845598186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +290,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a35469a0907dc47b45387c8245b3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2979313325214068008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092360975250361718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d5c3f5553c5304b999c3cb2e0115ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5466913221261735539
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5663487954739366863}
   - component: {fileID: 7715734532535876114}
+  - component: {fileID: 7378810743033363463}
   m_Layer: 10
   m_Name: Collider_Attack1
   m_TagString: Untagged
@@ -338,7 +365,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -369,6 +396,20 @@ PolygonCollider2D:
       - {x: 1.9586731, y: 2.507226}
       - {x: 1.4210751, y: 2.8418958}
   m_UseDelaunayMesh: 0
+--- !u!114 &7378810743033363463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5466913221261735539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: "\uD50C\uB808\uC774\uC5B41\uD3C9\uD0C0"
+  attackDamage: 5
 --- !u!1 &7595383214667775172
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1582188364877016953}
   - component: {fileID: 5244131510626462355}
+  - component: {fileID: 8759907212427185465}
   m_Layer: 10
   m_Name: Collider_Attack3
   m_TagString: Untagged
@@ -431,7 +473,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -461,6 +503,20 @@ PolygonCollider2D:
       - {x: 1.0839163, y: 3.447263}
       - {x: 0.0110189915, y: 3.4163628}
   m_UseDelaunayMesh: 0
+--- !u!114 &8759907212427185465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7595383214667775172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: "\uD50C\uB808\uC774\uC5B43\uD3C9\uD0C0"
+  attackDamage: 5
 --- !u!1 &8147548234687030765
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6618705130716921660}
   - component: {fileID: 4845795259895161434}
+  - component: {fileID: 6903809457910609251}
   m_Layer: 10
   m_Name: Collider_Attack2
   m_TagString: Untagged
@@ -523,7 +580,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -555,6 +612,20 @@ PolygonCollider2D:
       - {x: 0.47028077, y: 1.5671885}
       - {x: -0.27621412, y: 1.5624003}
   m_UseDelaunayMesh: 0
+--- !u!114 &6903809457910609251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147548234687030765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: "\uD50C\uB808\uC774\uC5B42\uD3C9\uD0C0"
+  attackDamage: 5
 --- !u!1 &8630083227835964261
 GameObject:
   m_ObjectHideFlags: 0

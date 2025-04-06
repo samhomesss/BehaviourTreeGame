@@ -1,14 +1,18 @@
+using System.Collections;
 using Unity.Behavior;
 using UnityEngine;
 
 public class PlayerDamagedEffect : MonoBehaviour
 {
     private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
+    private Color damagedColor = new Color(1, 0.6f, 0.6f, 1);
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
         PlayerHpManger.PlayerHpDamageEvent.OnPlayerDamagedEvent += Die;
+        PlayerHpManger.PlayerHpDamageEvent.OnPlayerDamagedEvent += _ => DamagedEffect();
     }
 
     private void Die(int playerHp)
@@ -17,6 +21,26 @@ public class PlayerDamagedEffect : MonoBehaviour
         {
             // todo : 입력정지 코드
             _animator.Play("DEATH");
+        }
+    }
+
+    private void DamagedEffect()
+    {
+        StartCoroutine(DamagedEffectCoroutine());
+    }
+
+    IEnumerator DamagedEffectCoroutine()
+    {
+        _spriteRenderer.color = damagedColor;
+        float time = 0f;
+        while (time < 0.3f)
+        {
+            float t = time / 0.3f;
+            float gb = Mathf.Lerp(150f / 255f, 1f, t);
+            _spriteRenderer.color = new Color(1, gb, gb, 1);
+
+            time += Time.deltaTime;
+            yield return null;
         }
     }
 }

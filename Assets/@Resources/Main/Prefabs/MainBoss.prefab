@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8604644570995274900}
   - component: {fileID: 3860177564108540976}
-  - component: {fileID: 7492430366746174407}
+  - component: {fileID: 2836116837047038412}
   m_Layer: 9
   m_Name: Collider_Attack_Air
   m_TagString: Untagged
@@ -87,18 +87,20 @@ PolygonCollider2D:
       - {x: -1.5061262, y: 1.8633233}
       - {x: -2.0452037, y: 2.4839087}
   m_UseDelaunayMesh: 0
---- !u!114 &7492430366746174407
+--- !u!114 &2836116837047038412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746461558244069183}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0629d17615d9bb1449cec123c4a385b9, type: 3}
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackName: "\uBCF4\uC2A4\uACF5\uC911\uD3C9\uD0C0"
+  attackDamage: 2
 --- !u!1 &2331395187402205944
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +114,7 @@ GameObject:
   - component: {fileID: 769856867783603709}
   - component: {fileID: 9026499399244892873}
   - component: {fileID: 7150632894982699580}
+  - component: {fileID: 4489608108060537887}
   - component: {fileID: 2431068388187531181}
   - component: {fileID: 1446361621214831071}
   - component: {fileID: 1532707073560976441}
@@ -119,6 +122,7 @@ GameObject:
   - component: {fileID: 2860073402026084605}
   - component: {fileID: 7328769883728206322}
   - component: {fileID: 8650694712894707914}
+  - component: {fileID: 6538998051327896565}
   m_Layer: 7
   m_Name: MainBoss
   m_TagString: Untagged
@@ -265,7 +269,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!114 &7150632894982699580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +307,18 @@ MonoBehaviour:
           m_Value1: 1779941618204458252
         Name: Target
         m_Value: {fileID: 0}
+--- !u!114 &4489608108060537887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331395187402205944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b064374678fa7174abbbac47ea34155b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2431068388187531181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +414,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 40
+--- !u!114 &6538998051327896565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331395187402205944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 545b4ea5360220a42a77e06af3d0fd46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2624140973452944628
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,7 +436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6970293584280243666}
   - component: {fileID: 6719101062116104134}
-  - component: {fileID: 3083165993188919412}
+  - component: {fileID: 7031224400715843718}
   m_Layer: 9
   m_Name: Collider_Attack3
   m_TagString: Untagged
@@ -485,18 +513,20 @@ PolygonCollider2D:
       - {x: 0.113473654, y: 1.6782258}
       - {x: -1.7791266, y: 1.5121484}
   m_UseDelaunayMesh: 0
---- !u!114 &3083165993188919412
+--- !u!114 &7031224400715843718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2624140973452944628}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0629d17615d9bb1449cec123c4a385b9, type: 3}
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackName: "\uBCF4\uC2A43\uD3C9\uD0C0"
+  attackDamage: 1
 --- !u!1 &4358952591079015032
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3750369011946738337}
   - component: {fileID: 3595848368083458572}
-  - component: {fileID: 7984240057515793829}
+  - component: {fileID: 998056882550316159}
   m_Layer: 9
   m_Name: Collider_Attack2
   m_TagString: Untagged
@@ -586,18 +616,20 @@ PolygonCollider2D:
       - {x: -1.4251462, y: 1.5394032}
       - {x: -2.0567725, y: 2.1715572}
   m_UseDelaunayMesh: 0
---- !u!114 &7984240057515793829
+--- !u!114 &998056882550316159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4358952591079015032}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0629d17615d9bb1449cec123c4a385b9, type: 3}
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackName: "\uBCF4\uC2A42\uD3C9\uD0C0"
+  attackDamage: 1
 --- !u!1 &8327302354520743862
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9164977747128167263}
   - component: {fileID: 1739217939760040733}
-  - component: {fileID: 2701094833700689235}
+  - component: {fileID: 7533103485244763447}
   m_Layer: 9
   m_Name: Collider_Attack1
   m_TagString: Untagged
@@ -686,18 +718,20 @@ PolygonCollider2D:
       - {x: -0.45338595, y: 0.9147005}
       - {x: -0.29834974, y: 0.88744575}
   m_UseDelaunayMesh: 0
---- !u!114 &2701094833700689235
+--- !u!114 &7533103485244763447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8327302354520743862}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0629d17615d9bb1449cec123c4a385b9, type: 3}
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackName: "\uBCF4\uC2A41\uD3C9\uD0C0"
+  attackDamage: 1
 --- !u!1 &8522385316860306322
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8056643279085365860}
   - component: {fileID: 123478024814585612}
-  - component: {fileID: 7378681016490797352}
+  - component: {fileID: 1699574924995667532}
   m_Layer: 9
   m_Name: Collider_Attack_Down
   m_TagString: Untagged
@@ -783,18 +817,20 @@ PolygonCollider2D:
       - {x: 0.13761605, y: 2.473783}
       - {x: 0.5202811, y: 2.6405616}
   m_UseDelaunayMesh: 0
---- !u!114 &7378681016490797352
+--- !u!114 &1699574924995667532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8522385316860306322}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0629d17615d9bb1449cec123c4a385b9, type: 3}
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackName: "\uBCF4\uC2A4\uB300\uC26C\uBCA0\uAE30"
+  attackDamage: 2
 --- !u!1 &8623963164019803335
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7464624728805848266}
   - component: {fileID: 4214757711425763898}
-  - component: {fileID: 1258366220771712105}
+  - component: {fileID: 6572653401295559849}
   m_Layer: 9
   m_Name: Collider_Attack_Special
   m_TagString: Untagged
@@ -883,15 +919,17 @@ PolygonCollider2D:
       - {x: -0.83514696, y: 2.133188}
       - {x: -0.44733593, y: 4.3232255}
   m_UseDelaunayMesh: 0
---- !u!114 &1258366220771712105
+--- !u!114 &6572653401295559849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8623963164019803335}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0629d17615d9bb1449cec123c4a385b9, type: 3}
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackName: "\uBCF4\uC2A4\uC62C\uB824\uCE58\uAE30"
+  attackDamage: 1
