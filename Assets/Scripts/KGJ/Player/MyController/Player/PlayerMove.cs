@@ -94,12 +94,12 @@ public class PlayerMove : MonoBehaviour
     {
         if (Managers.InputManager.MoveVec.x < 0)
         {
-            _playerSpriteRenderer.flipX = true;
+            transform.localScale = new Vector3(-1, 1, 1);
             PlayerStateManager.FilpX = true;
         }
         else if (Managers.InputManager.MoveVec.x > 0)
         {
-            _playerSpriteRenderer.flipX = false;
+            transform.localScale = new Vector3(1, 1, 1);
             PlayerStateManager.FilpX = false;
         }
     }

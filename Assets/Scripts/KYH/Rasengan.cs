@@ -13,6 +13,7 @@ public class Rasengan : MonoBehaviour
     private Vector3 rasenganEndPos;
     private float _speed;
     
+    
     private void Start()
     {
         _time = 0;

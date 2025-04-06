@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 369406572325445493}
   - component: {fileID: 7171009820542034113}
   - component: {fileID: 3220665415065101429}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plazma_Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4864,7 +4864,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2411841430932207978}
   - component: {fileID: 7804938534373389581}
-  m_Layer: 0
+  - component: {fileID: 4945737441533826328}
+  m_Layer: 9
   m_Name: Rasengan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4903,6 +4904,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxTime: 3
   _maxSize: 3
+--- !u!58 &4945737441533826328
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945667717391722829}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.0027971268, y: 0.0055944324}
+  m_Radius: 0.72657394
 --- !u!1 &5931138061938882756
 GameObject:
   m_ObjectHideFlags: 0
@@ -4914,7 +4951,7 @@ GameObject:
   - component: {fileID: 3743925064742975173}
   - component: {fileID: 3664379056992444305}
   - component: {fileID: 8450001218524014245}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plazma_Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9804,7 +9841,7 @@ GameObject:
   - component: {fileID: 2174867895167548285}
   - component: {fileID: 8135759523813407399}
   - component: {fileID: 7013587991500250458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plazma_Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
