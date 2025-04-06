@@ -6,12 +6,15 @@ public class BossAnimationEventController : MonoBehaviour
     PlayerStateManager _player;
     float _moveSpeed = 20f;
     float _dir;
-    PolygonCollider2D[] _colliders;
+    PolygonCollider2D[] _colliders = new PolygonCollider2D[6];
 
     void Start()
     {
         _player = FindAnyObjectByType<PlayerStateManager>();
-        _colliders = FindObjectsByType<PolygonCollider2D>(FindObjectsSortMode.None);
+        for (int i = 0; i < 6; i++)
+        {
+            _colliders[i] = transform.GetChild(i).GetComponent<PolygonCollider2D>();
+        }
     }
 
     private void Update()

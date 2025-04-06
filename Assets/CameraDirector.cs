@@ -7,7 +7,9 @@ using UnityEngine.Timeline;
 
 public enum CameraType
 {
-    Rasengan
+    Rasengan,
+    Enter,
+    Shadow
     
 }
 
@@ -37,6 +39,12 @@ public class CameraDirector : MonoBehaviour
         {
             case CameraType.Rasengan:
                 _pd.Play(timelines[0]);
+                break;
+            case CameraType.Enter:
+                _pd.Play(timelines[1]);
+                break;
+            case CameraType.Shadow:
+                _pd.Play(timelines[2]);
                 break;
             default:
                 Debug.LogError("Invalid camera type!");

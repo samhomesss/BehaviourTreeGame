@@ -79,7 +79,7 @@ public partial class BossShadowDashAction_YSH : Action
                 // 그림자들 target 추가
                 for (int i = 0; i < _shadowTargetParent.childCount; i++)
                 {
-                    Managers.CameraTargetManager.AddTarget(_shadowTarget[i], 0.5f, 4f);
+                    Managers.CameraTargetManager.AddTarget(_shadowTarget[i], 0.5f, 1f);
                 }
             }
 

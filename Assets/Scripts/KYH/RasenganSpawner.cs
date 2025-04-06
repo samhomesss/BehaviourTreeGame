@@ -41,6 +41,7 @@ public class RasenganSpawner : MonoBehaviour
             targetPosX = target.Value.transform.position.x;
             if(dir.Value > 0) rasenganInstance = Instantiate(_rasengan, _boss.transform.position + new Vector3(-0.39f,5f,0), Quaternion.identity);
             if(dir.Value <= 0) rasenganInstance = Instantiate(_rasengan, _boss.transform.position + new Vector3(0.39f,5f,0), Quaternion.identity);
+            rasenganInstance.GetComponent<CircleCollider2D>().enabled = false;
             //rasenganInstance.transform.localScale = new Vector3(0. 1, 1);
         }
         else
@@ -51,6 +52,7 @@ public class RasenganSpawner : MonoBehaviour
 
     public void RasenganAttack()
     {
+        rasenganInstance.GetComponent<CircleCollider2D>().enabled = true;
         StartCoroutine(Dash(targetPosX));
     }
 
