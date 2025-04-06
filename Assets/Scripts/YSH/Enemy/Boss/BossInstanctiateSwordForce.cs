@@ -12,6 +12,7 @@ public class BossInstanctiateSwordForce : MonoBehaviour
     public void InstantiateSword()
     {
         GameObject go = Instantiate(_swordForcePrefab, (Vector2)transform.position + Vector2.up , Quaternion.identity);
+        GetComponent<CameraEffect>()._wave.GenerateImpulse();
         Destroy(go, 4f);
     }
 }

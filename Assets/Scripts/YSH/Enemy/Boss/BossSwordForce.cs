@@ -8,7 +8,7 @@ public class BossSwordForce : MonoBehaviour
     
     void Start()
     {
-
+        
         _player = FindAnyObjectByType<PlayerStateManager>();
         dir = (_player.transform.position.x - this.transform.position.x) > 0 ? 1 : -1 ;
 
