@@ -18,16 +18,16 @@ public class KunaiMove : MonoBehaviour
         _damage = 10f;
         _direction = new Vector2(-1, 0); // 초기 방향 설정
         _bossController = FindObjectOfType<BossController_HSC>();
-        if(_bossController.GetComponent<SpriteRenderer>().flipX == false)
+        if(_bossController.transform.localScale.x < 0)
         {
             _direction.x = 1; // 보스가 오른쪽 바라보면 방향을 반대로 설정
-            transform.position += new Vector3(0.7f, 0, 0);
+            transform.position += new Vector3(2f, 0.2f, 0);
             GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
             _direction.x = -1; // 보스가 왼쪽을 바라보면 방향을 반대로 설정
-            transform.position += new Vector3(-0.7f, 0, 0);
+            transform.position += new Vector3(-2, 0.2f, 0);
             GetComponent<SpriteRenderer>().flipX = false;
         }
         Destroy(gameObject, _lifeTime);
