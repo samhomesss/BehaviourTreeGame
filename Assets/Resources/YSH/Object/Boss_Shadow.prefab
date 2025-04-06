@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7648404562516610989}
   - component: {fileID: 6038048465528829377}
   - component: {fileID: 7647466061323866579}
-  m_Layer: 7
+  - component: {fileID: 2653850874181447915}
+  m_Layer: 9
   m_Name: MainBoss_Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,6 +125,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.09375, y: 2}
   m_Radius: 0.96875
+--- !u!114 &2653850874181447915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229109721659430456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 1
 --- !u!1 &3292843562817906147
 GameObject:
   m_ObjectHideFlags: 0
