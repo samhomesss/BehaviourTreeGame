@@ -128,6 +128,13 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.33333334
+    functionName: Wave
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.33333334
     functionName: GetAttack1Start
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -136,6 +143,13 @@ AnimationClip:
     messageOptions: 0
   - time: 0.41666666
     functionName: GetAttack1End
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8333333
+    functionName: Wave
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -157,6 +171,13 @@ AnimationClip:
     messageOptions: 0
   - time: 1.3333334
     functionName: GetAttack3Start
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.3333334
+    functionName: Wave
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
