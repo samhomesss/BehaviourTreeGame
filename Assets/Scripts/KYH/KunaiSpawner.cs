@@ -22,7 +22,6 @@ public class KunaiSpawner : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            
             SpawnKunai();
         }
     }
@@ -31,9 +30,7 @@ public class KunaiSpawner : MonoBehaviour
     {
         if (_kunai != null && _boss != null)
         {
-            GameObject kunaiInstance = Instantiate(_kunai, _boss.transform.position + new Vector3(0,2,0), Quaternion.identity);
-            kunaiInstance.transform.localScale = new Vector3(_boss.transform.localScale.x, 1, 1);
-            
+            GameObject kunaiInstance = Instantiate(_kunai, _boss.transform.position + new Vector3(0,2.3f,0), Quaternion.identity);
             //kunaiInstance.transform.SetParent(_boss.transform);
         }
         else
