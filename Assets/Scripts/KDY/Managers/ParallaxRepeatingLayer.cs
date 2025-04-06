@@ -18,11 +18,18 @@ public class ParallaxRepeatingLayer : MonoBehaviour
 
     private float spriteWidth;
     private List<Transform> backgroundInstances = new List<Transform>();
+    private GameObject background;
+    private Color backgroundColor;
 
     private void Start()
     {
         cameraTransform = Camera.main.transform;
         previousCameraPosition = cameraTransform.position;
+        background = FindAnyObjectByType<ParallaxRepeatingManager>().gameObject;
+        backgroundColor = background.GetComponentInChildren<SpriteRenderer>().color;
+        
+        //스프라이트 생성
+        InitializeBackgrounds();
     }
 
     private void InitializeBackgrounds()
@@ -40,7 +47,8 @@ public class ParallaxRepeatingLayer : MonoBehaviour
             SpriteRenderer spriteRenderer = backgroundInstance.AddComponent<SpriteRenderer>();
             spriteRenderer.sprite = backgroundsSprite;
             spriteRenderer.sortingOrder = sortingOrder; // 정렬 순서 설정
-            spriteRenderer.color = new Color(94f / 255f, 94f / 255f, 94f / 255f, 1f);
+            spriteRenderer.color = backgroundColor; // 배경 색상 설정
+            
 
             // 배경 위치 설정
             Vector3 position = new Vector3(i * spriteWidth, 8, 0);
@@ -62,7 +70,7 @@ public class ParallaxRepeatingLayer : MonoBehaviour
 
     }
     
-    public void SetBackgroundSetup(Sprite sprite, int count, float factor, int order)
+    public void SetBackgroundSetup(Sprite sprite, int count, float factor, int order) //실행 주기 Manager Awake에서
     {
         backgroundsSprite = sprite;
         repeatCount = count;
@@ -75,8 +83,5 @@ public class ParallaxRepeatingLayer : MonoBehaviour
             Destroy(instance.gameObject);
         }
         backgroundInstances.Clear();
-
-        // 새로운 배경 초기화
-        InitializeBackgrounds();
     }
 }
