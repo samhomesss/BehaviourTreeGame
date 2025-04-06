@@ -49,7 +49,6 @@ public class RasenganSpawner : MonoBehaviour
         
         _behaviorGraphAgent.GetVariable("CurrentDirection", out BlackboardVariable<float> dir);
         _behaviorGraphAgent.GetVariable("Target", out BlackboardVariable<GameObject> target);
-        Debug.Log(dir.Value);
         StartCoroutine(Dash(target.Value));
     }
 

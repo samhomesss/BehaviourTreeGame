@@ -49,7 +49,6 @@ public class BossShadowLookPlayer : MonoBehaviour
             }
 
             dir = (_player.transform.position + Vector3.up * 1.5f - transform.position).normalized;
-            Debug.Log(dir);
 
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             transform.localRotation = Quaternion.Euler(0, 0, angle - 180);

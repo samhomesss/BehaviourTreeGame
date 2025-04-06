@@ -20,7 +20,6 @@ public partial class MainAttackAction : Action
         //////////////////  Warning  /////////////////
         // 애니메이션 명칭이 문자열로 그대로 들어가기 때문에
         // 휴먼에러 조심해야합니다.
-        Debug.Log(CurrentState.Value.ToString());
         _animationHash = Animator.StringToHash(CurrentState.Value.ToString());
         //////////////////  Warning  /////////////////
 

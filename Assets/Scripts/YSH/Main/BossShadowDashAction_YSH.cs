@@ -57,11 +57,9 @@ public partial class BossShadowDashAction_YSH : Action
         // 전체 For문으로 생각하고 Status.Success를 통과 시키면 될듯?
         _timer += Time.fixedDeltaTime;
         _bossStrickTimer += Time.fixedDeltaTime;
-        Debug.Log(_bossStrickTimer + "보스 스트라이크 타이머 ");
 
         if (_bossStrickTimer > 6f)
         {
-            Debug.Log("타이머 들어옴");
             Self.Value.transform.Translate(dir * ATTACK_SPEED * Time.fixedDeltaTime);
             
         }
