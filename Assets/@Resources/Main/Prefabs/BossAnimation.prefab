@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4891980203884877451}
   - component: {fileID: 1840694853008331619}
   - component: {fileID: 4088523580310055514}
+  - component: {fileID: 2166208384976546221}
   m_Layer: 0
   m_Name: BossAnimation
   m_TagString: Untagged
@@ -123,3 +124,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2837d4a073372ab47b671b9840616403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2166208384976546221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262035490217593285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b66384b0fd479478c13d19a1db4fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _earthquake: {fileID: 0}
+  _wave: {fileID: 0}

@@ -9,6 +9,7 @@ public class TriggerBattleEnter : MonoBehaviour
     GameObject _door;
     GameObject _bossAnimation;
     CinemachineCamera _cinemachineCamera;
+    CameraDirector _cameraDirector;
 
     Vector3 startPos = new Vector3(20.06f, 4.63f, 0f);    // 시작 위치
     Vector3 jumpPos = new Vector3(9.86f, 7.82f, 0f);      // 점프 위치
@@ -28,17 +29,15 @@ public class TriggerBattleEnter : MonoBehaviour
         _door.SetActive(false);
         _boss.SetActive(false);
         _bossAnimation.transform.position = startPos;
+        _cameraDirector = FindAnyObjectByType<CameraDirector>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Managers.CameraTargetManager.AddTarget(_bossAnimation.transform, 0.5f, 2f);
-        Managers.CameraTargetManager.RemoveTarget(_player.transform);
-        Managers.CameraTargetManager.AddTarget(_player.transform, 0.5f, 1f);
+        _cameraDirector.PlayTimeline(CameraType.Enter);
         _bossAnimation.GetComponent<Animator>().Play("JUMP-START");
         StartCoroutine(MoveSequence());
 
-        StartCoroutine(ZoomCamera(8f, 1f));
         StartCoroutine(AddPlayer());
     }
 
@@ -47,24 +46,8 @@ public class TriggerBattleEnter : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         _door.SetActive(true);
 
-        StartCoroutine(ZoomCamera(10f, 1f));
     }
 
-    IEnumerator ZoomCamera(float targetSize, float duration)
-    {
-        float startSize = _cinemachineCamera.Lens.OrthographicSize;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / duration;
-            _cinemachineCamera.Lens.OrthographicSize = Mathf.Lerp(startSize, targetSize, t);
-            yield return null;
-        }
-
-        _cinemachineCamera.Lens.OrthographicSize = targetSize;
-    }
 
     IEnumerator MoveSequence()
     {
