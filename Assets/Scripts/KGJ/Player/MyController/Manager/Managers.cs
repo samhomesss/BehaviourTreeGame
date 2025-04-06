@@ -9,6 +9,8 @@ public class Managers : MonoBehaviour
     public static InputManager InputManager => Instance._inputManager;
     InputManager _inputManager = new InputManager();
 
+    public static CameraTargetManager CameraTargetManager => Instance._cameraTargetManager;
+    CameraTargetManager _cameraTargetManager = new CameraTargetManager();
 
     private void Awake()
     {
@@ -29,6 +31,7 @@ public class Managers : MonoBehaviour
        // DontDestroyOnLoad(this);
         // 다른 매니저들 Init 해주면 됨 
         InputManager.Init();
+        CameraTargetManager.Init();
     }
 
     private void OnDisable()
