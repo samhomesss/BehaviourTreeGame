@@ -12,14 +12,14 @@ public class RasenganSpawner : MonoBehaviour
     private BehaviorGraphAgent _behaviorGraphAgent;
     private PlayableDirector pd;
     private float targetPosX;
-    [SerializeField]
+    //[SerializeField]
     private float _speed = 40f;
     
     
     
     private void Start()
     {
-       // pd = FindFirstObjectByType<PlayableDirector>();
+       pd = FindFirstObjectByType<PlayableDirector>();
         _behaviorGraphAgent = GetComponent<BehaviorGraphAgent>();
         _rasengan = Resources.Load<GameObject>("KYH/Prefabs/Rasengan");
         if (_rasengan == null)
@@ -33,7 +33,7 @@ public class RasenganSpawner : MonoBehaviour
     public void RasenganSpawn()
     {
         
-        //pd.GetComponent<TimelineManager>().PlayTimeline();
+        pd.GetComponent<CameraDirector>().PlayTimeline(CameraType.Rasengan);
         if (_rasengan != null && _boss != null)
         {
             _behaviorGraphAgent.GetVariable("Target", out BlackboardVariable<GameObject> target);
