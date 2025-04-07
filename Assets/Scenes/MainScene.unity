@@ -747,6 +747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriggerBattleEnter
       objectReference: {fileID: 0}
+    - target: {fileID: 8474886374359942470, guid: 17f6b10db0f51fe4a92294b44b20244e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

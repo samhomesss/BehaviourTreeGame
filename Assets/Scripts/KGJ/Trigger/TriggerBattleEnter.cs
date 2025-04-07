@@ -5,11 +5,10 @@ using Unity.Cinemachine; // Cinemachine ���ӽ����̽� ���
 public class TriggerBattleEnter : MonoBehaviour
 {
     GameObject _boss;
-    GameObject _player;
     GameObject _door;
     GameObject _bossAnimation;
-    CinemachineCamera _cinemachineCamera;
     CameraDirector _cameraDirector;
+    PolygonCollider2D _polygonCollider;
 
     Vector3 startPos = new Vector3(20.06f, 4.63f, 0f);    // ���� ��ġ
     Vector3 jumpPos = new Vector3(9.86f, 7.82f, 0f);      // ���� ��ġ
@@ -22,10 +21,9 @@ public class TriggerBattleEnter : MonoBehaviour
     void Start()
     {
         _boss = FindAnyObjectByType<BossAnimationEventController>().gameObject;
-        _player = FindAnyObjectByType<PlayerAnimationEventController>().gameObject;
         _bossAnimation = FindAnyObjectByType<AppearAnimation>().gameObject;
+        _polygonCollider = GetComponent<PolygonCollider2D>();
         _door = FindAnyObjectByType<Door>().gameObject;
-        _cinemachineCamera = FindAnyObjectByType<CinemachineCamera>();
         _door.SetActive(false);
         _boss.SetActive(false);
         _bossAnimation.transform.position = startPos;
@@ -35,6 +33,7 @@ public class TriggerBattleEnter : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         // TODO: �÷��̾� ������ ����
+        _polygonCollider.enabled = false;
         Managers.InputManager.SetPlayerMoveable(false);
         _cameraDirector.PlayTimeline(CameraType.Enter);
         
