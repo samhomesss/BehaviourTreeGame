@@ -19,10 +19,12 @@ public class BossAnimationEventController : MonoBehaviour
 
     private void Update()
     {
-        _dir = _player.transform.position.x > transform.position.x ? 1 : -1;
         if (_isDashing)
         {
-            transform.Translate(_dir * Vector3.right * _moveSpeed * Time.deltaTime);
+            _dir = _player.transform.position.x > transform.position.x ? 1 : -1;
+            if (_dir < 0) transform.localScale = new Vector3(1.3f, 1.3f, 1f);
+            else transform.localScale = new Vector3(-1.3f, 1.3f, 1f);
+                transform.Translate(_dir * Vector3.right * _moveSpeed * Time.deltaTime);
         }
     }
 
