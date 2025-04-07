@@ -24,7 +24,6 @@ public partial class BossJumpAttackMainAction_YSH : Action
     bool _isFalling; // 떨어지는 중
     PlayerStateManager player; // 플레이어 참조 
 
-
     protected override Status OnStart()
     {
         player = GameObject.FindAnyObjectByType<PlayerStateManager>();
@@ -33,16 +32,6 @@ public partial class BossJumpAttackMainAction_YSH : Action
         _jumpStartTargetPos = new Vector2(player.transform.position.x, JumpHeight); // 플레이어 위로 가기 위함 
         _timer = 0f; // 시간 초기화 
         _isFalling = false; // 아직 안떨어짐 
-
-        Transform _shadowTargetParent;
-
-        _shadowTargetParent = GameObject.FindAnyObjectByType<ShadowPatternTarget>().transform;
-        for (int i = 0; i < _shadowTargetParent.childCount; i++)
-        {
-            Managers.CameraTargetManager.RemoveTarget(_shadowTargetParent.GetChild(i));
-        }
-
-        Managers.CameraTargetManager.AddTarget(Self.Value.transform, 0.5f, 1f);
 
         return Status.Running;
     }

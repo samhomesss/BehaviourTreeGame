@@ -16,6 +16,7 @@ public partial class BossShadowDashAction_YSH : Action
 
     PlayerStateManager _player;
     BossInstantiateShadow _bossShadow;
+    CameraDirector _cameraDirector;
 
     Vector2 _dir;
     Transform _shadowTargetParent;
@@ -39,19 +40,13 @@ public partial class BossShadowDashAction_YSH : Action
     {
         _bossShadow = Self.Value.GetComponent<BossInstantiateShadow>();
         _player = GameObject.FindAnyObjectByType<PlayerStateManager>();
+        _cameraDirector = GameObject.FindAnyObjectByType<CameraDirector>();
         _bossStrickTimer = 0;
         _bossPos = UnityEngine.Random.Range(0, 4);
         Self.Value.transform.position = BossShadowPos.Value[_bossPos] + Vector2.down * 1.5f;
         _dir = (_player.transform.position - Self.Value.transform.position).normalized;
 
-        // 카메라 타겟 설정
-        _shadowTargetParent = GameObject.FindAnyObjectByType<ShadowPatternTarget>().transform;
-        _shadowTarget = new Transform[_shadowTargetParent.childCount];
-        for (int i = 0; i < _shadowTargetParent.childCount; i++)
-        {
-            _shadowTarget[i] = _shadowTargetParent.GetChild(i);
-        }
-        Managers.CameraTargetManager.RemoveTarget(Self.Value.transform);
+        _cameraDirector.PlayTimeline(CameraType.Shadow);
 
         return Status.Running;
     }
@@ -76,21 +71,13 @@ public partial class BossShadowDashAction_YSH : Action
             if (_bossPos != _instnaceCount)
             {
                 _bossShadow.InstantiateShadow(BossShadowPos.Value[_instnaceCount]);
-                // 그림자들 target 추가
-                for (int i = 0; i < _shadowTargetParent.childCount; i++)
-                {
-                    Managers.CameraTargetManager.AddTarget(_shadowTarget[i], 0.5f, 1f);
-                }
             }
 
             if (_instnaceCount == 3) // 그리고 여기에 해당 보스의 패턴이 다 끝났으면 넣어줘야 할 듯?
             {
                 _instnaceCount = 0;
 
-                for (int i = 0; i < _shadowTargetParent.childCount; i++)
-                {
-                    Managers.CameraTargetManager.RemoveTarget(_shadowTarget[i]);
-                }
+                
 
                 return Status.Success;
             }

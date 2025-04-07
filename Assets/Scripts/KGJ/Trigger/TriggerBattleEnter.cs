@@ -38,14 +38,13 @@ public class TriggerBattleEnter : MonoBehaviour
         
         StartCoroutine(MoveSequence());
 
-        StartCoroutine(AddPlayer());
+        StartCoroutine(ActiveDoor());
     }
 
-    IEnumerator AddPlayer()
+    IEnumerator ActiveDoor()
     {
         yield return new WaitForSeconds(1.5f);
         _door.SetActive(true);
-
     }
 
 
@@ -58,6 +57,7 @@ public class TriggerBattleEnter : MonoBehaviour
 
         // 2단계: 점프 -> 도착 위치로 이동
         yield return StartCoroutine(MoveToPosition(jumpPos, endPos, fallDuration, false));
+        yield return new WaitForSeconds(1.5f);
         _bossAnimation.SetActive(false);
         _boss.SetActive(true);
         GetComponent<PolygonCollider2D>().enabled = false;
