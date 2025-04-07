@@ -38,7 +38,7 @@ public class BossHpManager : MonoBehaviour
     void ChangeHp(int bossDamaged)
     {
         // 피격음
-        SoundManager.Instance.PlayHitSound();
+        SoundManager.Instance.PlayBossHitSound();
         BossHp -= bossDamaged;
        
         Debug.Log(BossHp + " 보스 피");

@@ -43,14 +43,7 @@ public class PlayerHpManger : MonoBehaviour
     void ChangHP(int damage)
     {
         // 피격음
-        if (damage > 3)
-        {
-            SoundManager.Instance.PlayPowerHitSound();
-        }
-        else
-        {
-            SoundManager.Instance.PlayHitSound();            
-        }
+        SoundManager.Instance.PlayPlayerHitSound();        
         StartCoroutine(PlayerHPChanagedTimer(damage));
     }
 

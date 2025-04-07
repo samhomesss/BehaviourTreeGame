@@ -14,6 +14,8 @@ public class BossSwordForce : MonoBehaviour
 
         if (dir < 0)
         {
+            //사운드
+            SoundManager.Instance.PlayBossSwordForceSound();
             this.transform.localScale = new Vector3(-this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
         }
     }
