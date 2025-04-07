@@ -908,6 +908,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_BossHP
       objectReference: {fileID: 0}
+    - target: {fileID: 6283703246272720551, guid: 6d9cee77d0f608846b59c33dc6d98d7a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078437650099483726, guid: 6d9cee77d0f608846b59c33dc6d98d7a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -279
+      objectReference: {fileID: 0}
     - target: {fileID: 8137144976247037120, guid: 6d9cee77d0f608846b59c33dc6d98d7a, type: 3}
       propertyPath: m_Camera
       value: 
