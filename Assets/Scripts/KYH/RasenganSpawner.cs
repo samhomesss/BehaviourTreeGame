@@ -36,6 +36,8 @@ public class RasenganSpawner : MonoBehaviour
         pd.GetComponent<CameraDirector>().PlayTimeline(CameraType.Rasengan);
         if (_rasengan != null && _boss != null)
         {
+            // 사운드
+            SoundManager.Instance.PlayRasenganSound();
             _behaviorGraphAgent.GetVariable("Target", out BlackboardVariable<GameObject> target);
             _behaviorGraphAgent.GetVariable("CurrentDirection", out BlackboardVariable<float> dir);
             targetPosX = target.Value.transform.position.x;

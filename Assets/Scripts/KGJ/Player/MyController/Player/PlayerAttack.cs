@@ -33,6 +33,9 @@ public class PlayerAttack : MonoBehaviour
             return;
         }
 
+        //검 효과음
+        SoundManager.Instance.PlaySwordSound(PlayerStateManager.Combo);
+        
         PlayerStateManager.IsAttacking = true;
         PlayerStateManager.IsAttackCooltime = false;
     }

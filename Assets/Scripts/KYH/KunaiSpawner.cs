@@ -30,6 +30,8 @@ public class KunaiSpawner : MonoBehaviour
     {
         if (_kunai != null && _boss != null)
         {
+            // 사운드
+            SoundManager.Instance.PlayKunaiSound();
             GameObject kunaiInstance = Instantiate(_kunai, _boss.transform.position + new Vector3(0,2.3f,0), Quaternion.identity);
             //kunaiInstance.transform.SetParent(_boss.transform);
         }
