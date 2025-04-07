@@ -6,4 +6,9 @@ public class BossSound : MonoBehaviour
     {
         SoundManager.Instance.PlayBossSwordSound();
     }
+    
+    public void PlayKoongSound()
+    {
+        SoundManager.Instance.PlayKoongSound();
+    }
 }

@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 6538998051327896565}
   - component: {fileID: 9086915142127282128}
   - component: {fileID: 1825456463130618348}
+  - component: {fileID: 5330757191347358825}
   m_Layer: 7
   m_Name: MainBoss
   m_TagString: Untagged
@@ -454,6 +455,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e854650ac2d38408648dcfffc64579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &5330757191347358825
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331395187402205944}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2624140973452944628
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackName: "\uBCF4\uC2A43\uD3C9\uD0C0"
-  attackDamage: 1
+  attackDamage: 2
 --- !u!1 &4358952591079015032
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackName: "\uBCF4\uC2A42\uD3C9\uD0C0"
-  attackDamage: 1
+  attackDamage: 2
 --- !u!60 &4273998853226992180
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -632,7 +730,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -757,7 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackName: "\uBCF4\uC2A41\uD3C9\uD0C0"
-  attackDamage: 1
+  attackDamage: 2
 --- !u!1 &8522385316860306322
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,4 +1056,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackName: "\uBCF4\uC2A4\uC62C\uB824\uCE58\uAE30"
-  attackDamage: 1
+  attackDamage: 2

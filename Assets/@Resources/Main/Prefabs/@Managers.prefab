@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2634091887966229641}
   - component: {fileID: 764914004537573687}
   - component: {fileID: 4544892982768498321}
-  - component: {fileID: 7735125716760409698}
   m_Layer: 0
   m_Name: '@Managers'
   m_TagString: Untagged
@@ -89,7 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d96d505acb2f98d4b9d1402e32455d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionAudioSource: {fileID: 7735125716760409698}
+  playerAudioSource: {fileID: 0}
+  bossAudioSource: {fileID: 0}
   bgmAudioSource: {fileID: 0}
   bgm: {fileID: 8300000, guid: 49e9dc27d2c69dd409bc43350e920660, type: 3}
   bgmVolume: 0.2
@@ -102,12 +102,12 @@ MonoBehaviour:
   swordSoundVolume: 0.2
   hitSound: {fileID: 8300000, guid: c8ffe131008a17947b08ff00e90f0988, type: 3}
   hitSoundVolume: 1.2
-  powerHitSound: {fileID: 8300000, guid: 4c9a92a2024b09e40ba0cc64907b9048, type: 3}
-  powerHitSoundVolume: 1
+  powerHitSound: {fileID: 0}
+  powerHitSoundVolume: 0
   walkSound: {fileID: 8300000, guid: cb8b1aa9aca39ad47b920c0561c32c4c, type: 3}
   walkSoundVolume: 1
   bossSwordSound: {fileID: 8300000, guid: 51e02b0fdbe6179468306211c810b0e2, type: 3}
-  bossSwordSoundVolume: 1
+  bossSwordSoundVolume: 0.8
   kunaiSound: {fileID: 8300000, guid: 1add7f06ca3a26243bd1b150e180885b, type: 3}
   kunaiSoundVolume: 1
   rasenganSound: {fileID: 8300000, guid: 3dbcc2643d4ed854785d611bf02fce07, type: 3}
@@ -116,100 +116,5 @@ MonoBehaviour:
   shoutSoundVolume: 0
   smokeSound: {fileID: 8300000, guid: f0f70312a7c5f5e498b23cebcbce7ca9, type: 3}
   smokeSoundVolume: 0.5
---- !u!82 &7735125716760409698
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380229861196189267}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  koongSound: {fileID: 8300000, guid: 4c9a92a2024b09e40ba0cc64907b9048, type: 3}
+  koongSoundVolume: 1
