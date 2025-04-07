@@ -1,15 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_PlayerDeath : MonoBehaviour
 {
     Canvas _canvas;
     Animator _deathAni;
+    Button _button;
 
     void Start()
     {
         _canvas = GetComponent<Canvas>();
         _deathAni = GetComponent<Animator>();
+        _button = GetComponentInChildren<Button>();
         _canvas.enabled = false;
+        _button.enabled = false;
         PlayerHpManger.PlayerHpDamageEvent.OnPlayerDamagedEvent += StartAni;
     }
 
@@ -17,6 +21,7 @@ public class UI_PlayerDeath : MonoBehaviour
     {
         if (playerHp == 0)
         {
+            _button.enabled = true;
             _canvas.enabled = true;
             _deathAni.Play("DeathUIStart");
         }
