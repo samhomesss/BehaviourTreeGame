@@ -91,10 +91,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionAudioSource: {fileID: 7735125716760409698}
   bgmAudioSource: {fileID: 0}
-  basicClickSound: {fileID: 0}
-  basicClickSoundVolume: 0
-  damagedSound: {fileID: 0}
-  damagedSoundVolume: 0
+  bgm: {fileID: 8300000, guid: 49e9dc27d2c69dd409bc43350e920660, type: 3}
+  bgmVolume: 0.2
+  dashSound: {fileID: 8300000, guid: ca05318358121ce458dd2d1bd507ff65, type: 3}
+  dashSoundVolume: 1
+  swordSound:
+  - {fileID: 8300000, guid: 672c4dc97b7fe8b4f8cfb4358fc8b3e0, type: 3}
+  - {fileID: 8300000, guid: 1b7b605b9d6e9134db9ec4aff25a0333, type: 3}
+  - {fileID: 8300000, guid: 5d124b91f1726f84baaab088192dbed9, type: 3}
+  swordSoundVolume: 0.2
+  kunaiSound: {fileID: 8300000, guid: 1add7f06ca3a26243bd1b150e180885b, type: 3}
+  kunaiSoundVolume: 0.3
+  rasenganSound: {fileID: 8300000, guid: 3dbcc2643d4ed854785d611bf02fce07, type: 3}
+  rasenganSoundVolume: 0.3
+  shoutSound: {fileID: 0}
+  shoutSoundVolume: 0
+  hitSound: {fileID: 8300000, guid: c86c057b53ca7b248aea9b020130520b, type: 3}
+  hitSoundVolume: 1.2
+  powerHitSound: {fileID: 8300000, guid: 4c9a92a2024b09e40ba0cc64907b9048, type: 3}
+  powerHitSoundVolume: 1
+  walkSound: {fileID: 8300000, guid: cb8b1aa9aca39ad47b920c0561c32c4c, type: 3}
+  walkSoundVolume: 1
 --- !u!82 &7735125716760409698
 AudioSource:
   m_ObjectHideFlags: 0

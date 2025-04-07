@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    Transform _groundCheckPoint; // ¶¥À» ÆÇÁ¤ÇÒ CheckPoint À§Ä¡ 
-    Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f); // ¶¥ÆÇÁ¤ »ç°¢ÇüÀÇ Vector °ª
-    LayerMask _groundLayer = 1 << 6; // LayerÀÇ ¼öÄ¡ 
+    Transform _groundCheckPoint; // ë•…ì„ íŒì •í•  CheckPoint ìœ„ì¹˜ 
+    Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f); // ë•…íŒì • ì‚¬ê°í˜•ì˜ Vector ê°’
+    LayerMask _groundLayer = 1 << 6; // Layerì˜ ìˆ˜ì¹˜ 
 
-    bool _isFacingRight = true; // Flip X ±â´ÉÀ» ¸¸µç °Å 
-    float _lastOnGroundTime; // ¶¥¿¡¼­ ÆÇÁ¤ÀÌ µÇ¾úÀ»¶§ 
+    bool _isFacingRight = true; // Flip X ê¸°ëŠ¥ì„ ë§Œë“  ê±° 
+    float _lastOnGroundTime; // ë•…ì—ì„œ íŒì •ì´ ë˜ì—ˆì„ë•Œ 
 
-    float _runAceelAmount = 9.5f; // ´Ş¸®±â °¡¼Óµµ °è»ê ¼öÄ¡ 
-    float _runDeccelAmount = 9.5f; // ´Ş¸®±â °¨¼Óµµ °è»ê ¼öÄ¡ 
+    float _runAceelAmount = 9.5f; // ë‹¬ë¦¬ê¸° ê°€ì†ë„ ê³„ì‚° ìˆ˜ì¹˜ 
+    float _runDeccelAmount = 9.5f; // ë‹¬ë¦¬ê¸° ê°ì†ë„ ê³„ì‚° ìˆ˜ì¹˜ 
 
-    float _accelInAir = 1f; // °øÁß¿¡ ÀÖÀ»¶§ °¡¼Óµµ °è»ê ¼öÄ¡ 
-    float _deccelInAir = 1f; // °øÁß¿¡ ÀÖÀ»¶§ °¨¼Óµµ °è»ê ¼öÄ¡ 
+    float _accelInAir = 1f; // ê³µì¤‘ì— ìˆì„ë•Œ ê°€ì†ë„ ê³„ì‚° ìˆ˜ì¹˜ 
+    float _deccelInAir = 1f; // ê³µì¤‘ì— ìˆì„ë•Œ ê°ì†ë„ ê³„ì‚° ìˆ˜ì¹˜ 
 
-    bool _doConserveMomentum = true; // ÇÃ·¹ÀÌ¾îÀÇ ÃÖ´ë ¼Óµµ¸¦ À¯Áö ½ÃÅ³°ÇÁö ¾Æ´ÑÁö 
+    bool _doConserveMomentum = true; // í”Œë ˆì´ì–´ì˜ ìµœëŒ€ ì†ë„ë¥¼ ìœ ì§€ ì‹œí‚¬ê±´ì§€ ì•„ë‹Œì§€ 
 
     SpriteRenderer _playerSpriteRenderer;
 
@@ -48,21 +48,21 @@ public class PlayerMove : MonoBehaviour
 
     void Move()
     {
-        // ±âº»ÀûÀÎ ÇÃ·¹ÀÌ¾îÀÇ ÀÌµ¿ ¼Óµµ¸¦ ÇöÀç ¹Ş¾Æ¿À´Â MoveVec °ª ¿¡ ÇÃ·¹ÀÌ¾î°¡ °¡Áö´Â RunMaxSpeed¸¦ °öÇØ¼­ ±¸ÇÑ´Ù 
+        // ê¸°ë³¸ì ì¸ í”Œë ˆì´ì–´ì˜ ì´ë™ ì†ë„ë¥¼ í˜„ì¬ ë°›ì•„ì˜¤ëŠ” MoveVec ê°’ ì— í”Œë ˆì´ì–´ê°€ ê°€ì§€ëŠ” RunMaxSpeedë¥¼ ê³±í•´ì„œ êµ¬í•œë‹¤ 
 
         float playerSpeed = Managers.InputManager.MoveVec.x * PlayerStateManager.PlayerSpeed;
-        // °¡¼Óµµ¸¦ ±¸ÇÒ °Å
+        // ê°€ì†ë„ë¥¼ êµ¬í•  ê±°
         float accelRate;
 
-        if (_lastOnGroundTime > 0) // ¹Ù´Ú¿¡ ÀÖ´Ù°¡ °øÁßÀ¸·Î ¹Ù²ï »óÅÂ¸¦ ÀÇ¹ÌÇÔ -> ¹Ù´Ú¿¡¼­ ¹Ì²ô·¯Á® ³»·Á¿Â »óÈ²
+        if (_lastOnGroundTime > 0) // ë°”ë‹¥ì— ìˆë‹¤ê°€ ê³µì¤‘ìœ¼ë¡œ ë°”ë€ ìƒíƒœë¥¼ ì˜ë¯¸í•¨ -> ë°”ë‹¥ì—ì„œ ë¯¸ë„ëŸ¬ì ¸ ë‚´ë ¤ì˜¨ ìƒí™©
             accelRate = (Mathf.Abs(playerSpeed) > 0.01f) ? _runAceelAmount : _runDeccelAmount;
         else
             accelRate = (Mathf.Abs(playerSpeed) > 0.01f) ? _runAceelAmount * _accelInAir : _runDeccelAmount * _deccelInAir;
 
 
-        // º¸Á¸ ¼öÄ¡°¡ ÄÑÁ®ÀÖ´ÂÁö && ÇÃ·¹ÀÌ¾î°¡ ÀÌ¹Ì ¸ñÇ¥ ¼Óµµº¸´Ù ºü¸£°Ô ¿òÁ÷ÀÌ°í ÀÖ´Â°¡? && ¼Óµµ¿Í ¸ñÇ¥ ¼Óµµ°¡ °°Àº ¹æÇâÀ¸·Î ¿òÁ÷ÀÌ°í ÀÖ´ÂÁö 
-        // ÀÛÀº °ªÀÎ (0.01f) ÀÌÇÏÀÇ °ªÀ» ¹«½ÃÇÔÀ¸·Î¼­ ¹Ì¼¼ÇÑ ¼Óµµ º¯È­·Î ÀÎÇØ¼­ Á¶°ÇÀÌ ÂüÀÌ µÇ´Â°ÍÀ» ¹æÁöÇÔ 
-        // ÇÃ·¹ÀÌ¾î°¡ °øÁß¿¡ ¶° ÀÖÀ» °æ¿ì¿¡ À§ÀÇ Á¶°ÇµéÀ» ´Ù ¸¸Á· ÇÑ´Ù¸é AccelRate¸¦ 0À¸·Î º¯È¯ ÇÑ´Ù.
+        // ë³´ì¡´ ìˆ˜ì¹˜ê°€ ì¼œì ¸ìˆëŠ”ì§€ && í”Œë ˆì´ì–´ê°€ ì´ë¯¸ ëª©í‘œ ì†ë„ë³´ë‹¤ ë¹ ë¥´ê²Œ ì›€ì§ì´ê³  ìˆëŠ”ê°€? && ì†ë„ì™€ ëª©í‘œ ì†ë„ê°€ ê°™ì€ ë°©í–¥ìœ¼ë¡œ ì›€ì§ì´ê³  ìˆëŠ”ì§€ 
+        // ì‘ì€ ê°’ì¸ (0.01f) ì´í•˜ì˜ ê°’ì„ ë¬´ì‹œí•¨ìœ¼ë¡œì„œ ë¯¸ì„¸í•œ ì†ë„ ë³€í™”ë¡œ ì¸í•´ì„œ ì¡°ê±´ì´ ì°¸ì´ ë˜ëŠ”ê²ƒì„ ë°©ì§€í•¨ 
+        // í”Œë ˆì´ì–´ê°€ ê³µì¤‘ì— ë–  ìˆì„ ê²½ìš°ì— ìœ„ì˜ ì¡°ê±´ë“¤ì„ ë‹¤ ë§Œì¡± í•œë‹¤ë©´ AccelRateë¥¼ 0ìœ¼ë¡œ ë³€í™˜ í•œë‹¤.
         if (_doConserveMomentum && Mathf.Abs(PlayerStateManager.PlayerRigid.linearVelocity.x) > Mathf.Abs(playerSpeed)
             && Mathf.Sign(PlayerStateManager.PlayerRigid.linearVelocity.x) == Mathf.Sign(playerSpeed) && Mathf.Abs(playerSpeed) > 0.01f 
             && _lastOnGroundTime < 0 )
@@ -71,13 +71,13 @@ public class PlayerMove : MonoBehaviour
         }
 
 
-        // ÇÃ·¹ÀÌ¾îÀÇ ÀÌµ¿ ¼Óµµ¸¦ °í·ÁÇÑ ÀÌµ¿ ¹æÇâ + ½ºÇÇµå¸¦ ±¸ÇÏ°í 
+        // í”Œë ˆì´ì–´ì˜ ì´ë™ ì†ë„ë¥¼ ê³ ë ¤í•œ ì´ë™ ë°©í–¥ + ìŠ¤í”¼ë“œë¥¼ êµ¬í•˜ê³  
         float speedDif = playerSpeed - PlayerStateManager.PlayerRigid.linearVelocity.x;
-        float moveMent = speedDif * accelRate; // ÇØ´ç ¿òÁ÷ÀÓÀÌ °¡¼ÓÀÎÁö °¨¼ÓÀÎÁö¸¦ °è»êÇÏ°í 
+        float moveMent = speedDif * accelRate; // í•´ë‹¹ ì›€ì§ì„ì´ ê°€ì†ì¸ì§€ ê°ì†ì¸ì§€ë¥¼ ê³„ì‚°í•˜ê³  
         
-        PlayerStateManager.PlayerRigid.AddForce(moveMent * Vector2.right, ForceMode2D.Force); // ÇØ´ç ¹æÇâÀ¸·Î ÈûÀ» Áà¼­ °¡¼ÓÇÏ°Å³ª °¨¼ÓÇÔ
+        PlayerStateManager.PlayerRigid.AddForce(moveMent * Vector2.right, ForceMode2D.Force); // í•´ë‹¹ ë°©í–¥ìœ¼ë¡œ í˜ì„ ì¤˜ì„œ ê°€ì†í•˜ê±°ë‚˜ ê°ì†í•¨
 
-        #region ¿ø·¡ ÄÚµå
+        #region ì›ë˜ ì½”ë“œ
         //Vector2 playerMoveVelocity = Vector2.zero;
 
         //if (Managers.InputManager.IsMove)
@@ -105,7 +105,7 @@ public class PlayerMove : MonoBehaviour
     }
 
     /// <summary>
-    /// ÇÃ·¹ÀÌ¾î°¡ ¶¥¿¡ ÀÖ´ÂÁö¸¦ º¸±âÀ§ÇÔ 
+    /// í”Œë ˆì´ì–´ê°€ ë•…ì— ìˆëŠ”ì§€ë¥¼ ë³´ê¸°ìœ„í•¨ 
     /// </summary>
     void IsGrounded()
     {
