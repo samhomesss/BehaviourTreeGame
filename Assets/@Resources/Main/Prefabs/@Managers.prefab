@@ -106,7 +106,7 @@ MonoBehaviour:
   rasenganSoundVolume: 0.3
   shoutSound: {fileID: 0}
   shoutSoundVolume: 0
-  hitSound: {fileID: 8300000, guid: c86c057b53ca7b248aea9b020130520b, type: 3}
+  hitSound: {fileID: 8300000, guid: c8ffe131008a17947b08ff00e90f0988, type: 3}
   hitSoundVolume: 1.2
   powerHitSound: {fileID: 8300000, guid: 4c9a92a2024b09e40ba0cc64907b9048, type: 3}
   powerHitSoundVolume: 1
