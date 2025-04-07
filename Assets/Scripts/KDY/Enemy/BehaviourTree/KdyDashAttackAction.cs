@@ -25,7 +25,7 @@ public partial class KdyDashAttackAction : Action
         // 플레이어 방향으로 대쉬 공격
         if (_rb != null)
         {
-            Vector2 dashDirection = new Vector2(CurrentDirection.Value, 0).normalized;
+            Vector2 dashDirection = new Vector2(-Self.Value.transform.localScale.x, 0).normalized;
             float dashSpeed = 25f; // 대쉬 속도
             _rb.AddForce(dashDirection * dashSpeed, ForceMode2D.Impulse);
         }
