@@ -9729,45 +9729,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
-      propertyPath: bossHitSound
-      value: 
-      objectReference: {fileID: 8300000, guid: c8ffe131008a17947b08ff00e90f0988, type: 3}
-    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
       propertyPath: bgmAudioSource
       value: 
       objectReference: {fileID: 1588669875}
-    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
-      propertyPath: playerHitSound
-      value: 
-      objectReference: {fileID: 8300000, guid: cd838b166cc11de4aa68fbcff85ee41c, type: 3}
     - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
       propertyPath: bossAudioSource
       value: 
       objectReference: {fileID: 1270687902482164101}
     - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
-      propertyPath: dashSoundVolume
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
       propertyPath: playerAudioSource
       value: 
       objectReference: {fileID: 1920845878}
-    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
-      propertyPath: bossHitSoundVolume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
-      propertyPath: bossSwordForceSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 9071f66eaff319c4db41acb4a123323b, type: 3}
-    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
-      propertyPath: playerHitSoundVolume
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
-      propertyPath: bossSwordForceSoundVolume
-      value: 1.3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
