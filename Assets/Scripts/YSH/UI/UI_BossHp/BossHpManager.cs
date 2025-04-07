@@ -39,6 +39,7 @@ public class BossHpManager : MonoBehaviour
     {
 
         BossHp -= bossDamaged;
+       
         Debug.Log(BossHp + " º¸½º ÇÇ");
     }
 
