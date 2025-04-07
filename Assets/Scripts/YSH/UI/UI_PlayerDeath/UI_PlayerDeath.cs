@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,9 +25,15 @@ public class UI_PlayerDeath : MonoBehaviour
             //사운드
             SoundManager.Instance.PlayDeathBellSound();
             SoundManager.Instance.PlayCrowSound();
-            _button.enabled = true;
+            StartCoroutine(ButtonOn());
             _canvas.enabled = true;
             _deathAni.Play("DeathUIStart");
         }
+    }
+
+    IEnumerator ButtonOn()
+    {
+        yield return new WaitForSeconds(1f);
+        _button.enabled = true;
     }
 }
