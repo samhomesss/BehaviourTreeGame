@@ -51,7 +51,7 @@ public class ParallaxRepeatingLayer : MonoBehaviour
             
 
             // 배경 위치 설정
-            Vector3 position = new Vector3(i * spriteWidth, 8, 0);
+            Vector3 position = new Vector3(i * spriteWidth-30f, 8, 0);
             backgroundInstance.transform.localPosition = position;
 
             backgroundInstances.Add(backgroundInstance.transform);
