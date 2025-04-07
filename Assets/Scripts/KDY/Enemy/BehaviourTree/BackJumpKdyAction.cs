@@ -57,7 +57,7 @@ public partial class BackJumpKdyAction : Action
         {
             _rb.gravityScale = 4f;
         }
-        if (yDiff < 0.1f && Mathf.Abs(_rb.linearVelocity.y) < 0.1f)
+        if (yDiff < 0.5f && Mathf.Abs(_rb.linearVelocity.y) < 0.1f)
         {
             // 착지 완료, 점프 종료
             return Status.Success;

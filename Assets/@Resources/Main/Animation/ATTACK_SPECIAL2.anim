@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ATTACK_SPECIAL
+  m_Name: ATTACK_SPECIAL2
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -40,15 +40,15 @@ AnimationClip:
       value: {fileID: -7335579902129854106, guid: e2b2d37441287ed429daf2c06287b451, type: 3}
     - time: 0.8999996
       value: {fileID: -818841882770791384, guid: e2b2d37441287ed429daf2c06287b451, type: 3}
-    - time: 1
+    - time: 1.33
       value: {fileID: -2735224439832191148, guid: e2b2d37441287ed429daf2c06287b451, type: 3}
-    - time: 1.0999994
+    - time: 1.43
       value: {fileID: 3409589073757116798, guid: e2b2d37441287ed429daf2c06287b451, type: 3}
-    - time: 1.1999998
+    - time: 1.53
       value: {fileID: -5549732982843754643, guid: e2b2d37441287ed429daf2c06287b451, type: 3}
-    - time: 1.2999992
+    - time: 1.63
       value: {fileID: 5348653191956694906, guid: e2b2d37441287ed429daf2c06287b451, type: 3}
-    - time: 1.3899993
+    - time: 1.72
       value: {fileID: 5348653191956694906, guid: e2b2d37441287ed429daf2c06287b451, type: 3}
     attribute: m_Sprite
     path: 
@@ -92,7 +92,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.3999993
+    m_StopTime: 1.73
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -126,7 +126,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1
+  - time: 1.33
     functionName: Earthquake
     data: 
     objectReferenceParameter: {fileID: 0}

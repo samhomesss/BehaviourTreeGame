@@ -18,7 +18,7 @@ public class Attack : MonoBehaviour
     {
         if (_player != null)
         {
-            Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y + 3f);
+            Vector2 spawnPos = new Vector2(transform.position.x, transform.position.y + 2.5f);
             GameObject effect = Instantiate(_damagedEffect, spawnPos, Quaternion.identity);
             if (_player.transform.localScale.x < 0)
             {

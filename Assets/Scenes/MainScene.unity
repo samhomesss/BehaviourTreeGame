@@ -9680,11 +9680,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6903809457910609251, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
       propertyPath: attackName
-      value: PlayerAttack_2
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903809457910609251, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+      propertyPath: attackDamage
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7378810743033363463, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
       propertyPath: attackName
-      value: PlayerAttack_1
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378810743033363463, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+      propertyPath: attackDamage
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7715734532535876114, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
       propertyPath: m_Enabled
@@ -9692,7 +9700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759907212427185465, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
       propertyPath: attackName
-      value: PlayerAttack_3
+      value: PlayerAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759907212427185465, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+      propertyPath: attackDamage
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

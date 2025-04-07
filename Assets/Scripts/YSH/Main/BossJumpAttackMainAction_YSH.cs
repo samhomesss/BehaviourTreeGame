@@ -92,6 +92,7 @@ public partial class BossJumpAttackMainAction_YSH : Action
     {
         _timer = 0f;
         _isFalling = false;
+        Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("CurrentState", MainBossState.IDLE); // 공격 상태 해제
     }
 }
 
