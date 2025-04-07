@@ -16,7 +16,7 @@ public enum MainBossState
     ATTACK_SPECIAL2,
     CLIMBING,
 	DASH,
-	DEATH,
+    DEATH,
 	DEFEND,
 	HEALING,
 	HEALING_NOEFFECT,
@@ -33,6 +33,7 @@ public enum MainBossState
 	WALL_SLIDE,
 	KUNAI,
 	ATTACK_RHYTHM,
-	RASENGAN
-
+	RASENGAN,
+    DASHATTACK,
+	READY
 }

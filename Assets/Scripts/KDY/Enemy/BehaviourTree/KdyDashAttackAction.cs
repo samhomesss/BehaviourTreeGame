@@ -26,7 +26,7 @@ public partial class KdyDashAttackAction : Action
         if (_rb != null)
         {
             Vector2 dashDirection = new Vector2(CurrentDirection.Value, 0).normalized;
-            float dashSpeed = 20f; // 대쉬 속도
+            float dashSpeed = 25f; // 대쉬 속도
             _rb.AddForce(dashDirection * dashSpeed, ForceMode2D.Impulse);
         }
         else
