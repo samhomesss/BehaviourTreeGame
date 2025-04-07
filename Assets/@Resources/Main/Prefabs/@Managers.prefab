@@ -94,7 +94,7 @@ MonoBehaviour:
   bgm: {fileID: 8300000, guid: 49e9dc27d2c69dd409bc43350e920660, type: 3}
   bgmVolume: 0.2
   dashSound: {fileID: 8300000, guid: ca05318358121ce458dd2d1bd507ff65, type: 3}
-  dashSoundVolume: 1
+  dashSoundVolume: 1.3
   swordSound:
   - {fileID: 8300000, guid: 672c4dc97b7fe8b4f8cfb4358fc8b3e0, type: 3}
   - {fileID: 8300000, guid: 1b7b605b9d6e9134db9ec4aff25a0333, type: 3}

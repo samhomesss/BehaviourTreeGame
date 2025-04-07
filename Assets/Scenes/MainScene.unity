@@ -9772,6 +9772,14 @@ PrefabInstance:
       propertyPath: bgmAudioSource
       value: 
       objectReference: {fileID: 1588669875}
+    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+      propertyPath: bossAudioSource
+      value: 
+      objectReference: {fileID: 1270687902482164086}
+    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+      propertyPath: playerAudioSource
+      value: 
+      objectReference: {fileID: 1920845863}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11213,6 +11221,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4092360975250361718, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
   m_PrefabInstance: {fileID: 1117419304}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1920845863 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4490192238964550662, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+  m_PrefabInstance: {fileID: 1117419304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1935527130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11889,6 +11902,11 @@ PrefabInstance:
 --- !u!4 &1270687902482164085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1915832097999717245, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+  m_PrefabInstance: {fileID: 1270687902482164082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1270687902482164086 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5330757191347358825, guid: cf069580807ebe046baa4992edbd371f, type: 3}
   m_PrefabInstance: {fileID: 1270687902482164082}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5097819350863896023
