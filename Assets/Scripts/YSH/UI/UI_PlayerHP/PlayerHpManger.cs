@@ -5,7 +5,7 @@ public class PlayerHpManger : MonoBehaviour
 {
     #region PlayerHP Property
     /// <summary>
-    /// ¿ø·¡ µû·Î °ü¸® ÇØ¾ß µË´Ï´Ù.
+    /// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½Ë´Ï´ï¿½.
     /// </summary>
     public int PlayerHP
     {
@@ -26,7 +26,7 @@ public class PlayerHpManger : MonoBehaviour
     public static PlayerHpManger Instance => _instance;
     static PlayerHpManger _instance;
 
-    public static PlayerHpDamageEvent PlayerHpDamageEvent => Instance._playerHpDamageEvent; // ÇÃ·¹ÀÌ¾î°¡ µ¥¹ÌÁö ÀÔÀ¸¸é ¹Ù²î´Â°Å 
+    public static PlayerHpDamageEvent PlayerHpDamageEvent => Instance._playerHpDamageEvent; // ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½Â°ï¿½ 
     PlayerHpDamageEvent _playerHpDamageEvent = new PlayerHpDamageEvent();
     #endregion
 
@@ -42,6 +42,15 @@ public class PlayerHpManger : MonoBehaviour
 
     void ChangHP(int damage)
     {
+        // í”¼ê²©ìŒ
+        if (damage > 3)
+        {
+            SoundManager.Instance.PlayPowerHitSound();
+        }
+        else
+        {
+            SoundManager.Instance.PlayHitSound();            
+        }
         StartCoroutine(PlayerHPChanagedTimer(damage));
     }
 
