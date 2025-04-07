@@ -12,7 +12,7 @@ public class BossHpManager : MonoBehaviour
         set
         {
             _bossHp = value;
-            //Todo : Ã¼·Â ¹Ù²î¾úÀ»¶§ ³Ñ°Ü ÁÙ·Á´Â°Å
+            //Todo : ì²´ë ¥ ë°”ë€Œì—ˆì„ë•Œ ë„˜ê²¨ ì¤„ë ¤ëŠ”ê±°
             BossChangeHpReaction(_bossHp);
         }
     }
@@ -37,10 +37,11 @@ public class BossHpManager : MonoBehaviour
 
     void ChangeHp(int bossDamaged)
     {
-
+        // í”¼ê²©ìŒ
+        SoundManager.Instance.PlayHitSound();
         BossHp -= bossDamaged;
        
-        Debug.Log(BossHp + " º¸½º ÇÇ");
+        Debug.Log(BossHp + " ë³´ìŠ¤ í”¼");
     }
 
     void BossChangeHpReaction(int bossHp)

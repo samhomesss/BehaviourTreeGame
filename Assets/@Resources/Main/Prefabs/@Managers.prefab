@@ -112,6 +112,8 @@ MonoBehaviour:
   powerHitSoundVolume: 1
   walkSound: {fileID: 8300000, guid: cb8b1aa9aca39ad47b920c0561c32c4c, type: 3}
   walkSoundVolume: 1
+  smokeSound: {fileID: 8300000, guid: f0f70312a7c5f5e498b23cebcbce7ca9, type: 3}
+  smokeSoundVolume: 0.5
 --- !u!82 &7735125716760409698
 AudioSource:
   m_ObjectHideFlags: 0
