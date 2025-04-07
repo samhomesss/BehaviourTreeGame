@@ -11,4 +11,13 @@ public class BossSound : MonoBehaviour
     {
         SoundManager.Instance.PlayKoongSound();
     }
+    
+    public void PlayDashAttackReadySound()
+    {
+        SoundManager.Instance.PlayDashAttackReadySound();
+    }
+    public void PlayDashAttackSound()
+    {
+        SoundManager.Instance.PlayDashAttackSound();
+    }
 }
