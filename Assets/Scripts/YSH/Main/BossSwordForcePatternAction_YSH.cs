@@ -21,7 +21,9 @@ public partial class BossSwordForcePatternAction_YSH : Action
     protected override Status OnStart()
     {
         int random = UnityEngine.Random.Range(0 , 2);
-        Self.Value.transform.position = BossSwordForcePos.Value[random];
+        // Todo : 거리 계산해서 두 값 계산해서 더 먼 쪽으로 이동시키기
+        // OR : 포지션 이동 없이 백스텝 이후 패턴으로 넣거나.
+        //Self.Value.transform.position = BossSwordForcePos.Value[random];
         _instanceSword = Self.Value.GetComponent<BossInstanctiateSwordForce>();
 
         
