@@ -339,6 +339,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 712771831343399432, guid: 977febe7c7abc884189a26cf768dda32, type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 6906330680457701242}
     - target: {fileID: 2600462777303149737, guid: 977febe7c7abc884189a26cf768dda32, type: 3}
       propertyPath: m_Name
       value: Sacuraparticle
@@ -483,6 +487,11 @@ PrefabInstance:
 --- !u!224 &6906330680457701241 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 438884939175195119, guid: 977febe7c7abc884189a26cf768dda32, type: 3}
+  m_PrefabInstance: {fileID: 6906330680457701240}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6906330680457701242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 367855963958231364, guid: 977febe7c7abc884189a26cf768dda32, type: 3}
   m_PrefabInstance: {fileID: 6906330680457701240}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
