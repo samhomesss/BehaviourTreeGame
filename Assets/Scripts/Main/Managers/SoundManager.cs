@@ -44,6 +44,10 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip walkSound;
     [Tooltip("걷기 사운드 볼륨")]
     [SerializeField] private float walkSoundVolume;
+    [Tooltip("연막탄 사운드")]
+    [SerializeField] private AudioClip smokeSound;
+    [Tooltip("연막탄 사운드 볼륨")]
+    [SerializeField] private float smokeSoundVolume;
     
 
     private void Awake()
@@ -108,6 +112,11 @@ public class SoundManager : MonoBehaviour
     public void PlayWalkSound()
     {
         PlaySound(walkSound, walkSoundVolume);
+    }
+
+    public void PlaySmokeSound()
+    {
+        PlaySound(smokeSound, smokeSoundVolume);
     }
     
 

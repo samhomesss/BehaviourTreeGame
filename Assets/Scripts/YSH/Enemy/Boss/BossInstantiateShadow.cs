@@ -11,6 +11,8 @@ public class BossInstantiateShadow : MonoBehaviour
 
     public void InstantiateShadow(Vector2 pos)
     {
+        //연막탄 소리
+        SoundManager.Instance.PlaySmokeSound();
         GameObject go = Instantiate(_bossShadowPrefab, pos , Quaternion.identity);
     }
 }
