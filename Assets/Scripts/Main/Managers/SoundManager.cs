@@ -37,6 +37,10 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip walkSound;
     [Tooltip("걷기 사운드 볼륨")]
     [SerializeField] private float walkSoundVolume;
+    [Tooltip("죽음 사운드")]
+    [SerializeField] private AudioClip deathBellSound;
+    [Tooltip("죽음 사운드 볼륨")]
+    [SerializeField] private float deathBellSoundVolume;
     
     [Header("보스 사운드")]
     [Tooltip("보스 피격 사운드")]
@@ -79,6 +83,10 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip dashAttackSound;
     [Tooltip("발도 사운드 볼륨")]
     [SerializeField] private float dashAttackSoundVolume;
+    [Tooltip("까마귀 사운드")]
+    [SerializeField] private AudioClip crowSound;
+    [Tooltip("까마귀 사운드 볼륨")]
+    [SerializeField] private float crowSoundVolume;
     
 
     private void Awake()
@@ -134,6 +142,11 @@ public class SoundManager : MonoBehaviour
         PlayPlayerSound(walkSound, walkSoundVolume);
     }
 
+    public void PlayDeathBellSound()
+    {
+        PlayPlayerSound(deathBellSound, deathBellSoundVolume);
+    } 
+
     
     /// <summary>
     /// 보스 사운드 재생
@@ -182,6 +195,11 @@ public class SoundManager : MonoBehaviour
     public void PlayDashAttackSound()
     {
         PlayBossSound(dashAttackSound, dashAttackSoundVolume);
+    }
+
+    public void PlayCrowSound()
+    {
+        PlayBossSound(crowSound, crowSoundVolume);
     }
     
 

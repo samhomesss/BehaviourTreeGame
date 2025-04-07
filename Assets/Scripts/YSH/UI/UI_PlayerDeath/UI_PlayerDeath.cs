@@ -21,6 +21,9 @@ public class UI_PlayerDeath : MonoBehaviour
     {
         if (playerHp == 0)
         {
+            //사운드
+            SoundManager.Instance.PlayDeathBellSound();
+            SoundManager.Instance.PlayCrowSound();
             _button.enabled = true;
             _canvas.enabled = true;
             _deathAni.Play("DeathUIStart");

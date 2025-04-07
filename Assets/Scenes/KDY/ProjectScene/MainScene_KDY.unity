@@ -9729,17 +9729,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+      propertyPath: crowSound
+      value: 
+      objectReference: {fileID: 8300000, guid: eb463bbd0c29f4c4ea165f33059ba3fe, type: 3}
+    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
       propertyPath: bgmAudioSource
       value: 
       objectReference: {fileID: 1588669875}
+    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+      propertyPath: deathBellSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a8ed982467bef34ca3cbe677d0ae27d, type: 3}
     - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
       propertyPath: bossAudioSource
       value: 
       objectReference: {fileID: 1270687902482164101}
     - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+      propertyPath: crowSoundVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
       propertyPath: playerAudioSource
       value: 
       objectReference: {fileID: 1920845878}
+    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+      propertyPath: deathBellSoundVolume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
