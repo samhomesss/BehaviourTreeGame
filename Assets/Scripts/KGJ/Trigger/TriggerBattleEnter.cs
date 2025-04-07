@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using Unity.Cinemachine; // Cinemachine ³×ÀÓ½ºÆäÀÌ½º »ç¿ë
+using Unity.Cinemachine; // Cinemachine ï¿½ï¿½ï¿½Ó½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ ï¿½ï¿½ï¿½
 
 public class TriggerBattleEnter : MonoBehaviour
 {
@@ -11,13 +11,13 @@ public class TriggerBattleEnter : MonoBehaviour
     CinemachineCamera _cinemachineCamera;
     CameraDirector _cameraDirector;
 
-    Vector3 startPos = new Vector3(20.06f, 4.63f, 0f);    // ½ÃÀÛ À§Ä¡
-    Vector3 jumpPos = new Vector3(9.86f, 7.82f, 0f);      // Á¡ÇÁ À§Ä¡
-    Vector3 endPos = new Vector3(3.39f, -3.75f, 0f);      // µµÂø À§Ä¡
+    Vector3 startPos = new Vector3(20.06f, 4.63f, 0f);    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
+    Vector3 jumpPos = new Vector3(9.86f, 7.82f, 0f);      // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
+    Vector3 endPos = new Vector3(3.39f, -3.75f, 0f);      // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡
 
-    float jumpDuration = 1.5f;  // ½ÃÀÛ -> Á¡ÇÁ±îÁö °É¸®´Â ½Ã°£
-    float fallDuration = 0.3f;  // Á¡ÇÁ -> µµÂø±îÁö °É¸®´Â ½Ã°£
-    float jumpHeight = 1f;    // Á¡ÇÁ ³ôÀÌ (Æ÷¹°¼± È¿°ú)
+    float jumpDuration = 1.5f;  // ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É¸ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
+    float fallDuration = 0.3f;  // ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É¸ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
+    float jumpHeight = 1f;    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¿ï¿½ï¿½)
 
     void Start()
     {
@@ -34,7 +34,7 @@ public class TriggerBattleEnter : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // TODO: ÇÃ·¹ÀÌ¾î ¿òÁ÷ÀÓ ¸·±â
+        // TODO: ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         Managers.InputManager.SetPlayerMoveable(false);
         _cameraDirector.PlayTimeline(CameraType.Enter);
         
@@ -52,15 +52,15 @@ public class TriggerBattleEnter : MonoBehaviour
 
     IEnumerator MoveSequence()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         _bossAnimation.GetComponent<Animator>().Play("JUMP-START");
-        // 1´Ü°è: ½ÃÀÛ -> Á¡ÇÁ À§Ä¡·Î ÀÌµ¿
+        // 1ï¿½Ü°ï¿½: ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ìµï¿½
         yield return StartCoroutine(MoveToPosition(startPos, jumpPos, jumpDuration, true));
 
-        // 2´Ü°è: Á¡ÇÁ -> µµÂø À§Ä¡·Î ÀÌµ¿
+        // 2ï¿½Ü°ï¿½: ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ìµï¿½
         yield return StartCoroutine(MoveToPosition(jumpPos, endPos, fallDuration, false));
 
-        // TODO: ÇÃ·¹ÀÌ¾î ¿òÁ÷ÀÓ Ç®±â
+        // TODO: ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç®ï¿½ï¿½
         Managers.InputManager.SetPlayerMoveable(true);
 
         yield return new WaitForSeconds(1.5f);
@@ -76,23 +76,23 @@ public class TriggerBattleEnter : MonoBehaviour
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
-            float t = elapsedTime / duration; // 0¿¡¼­ 1·Î ÁøÇà·ü
+            float t = elapsedTime / duration; // 0ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 
-            // ±âº» ¼±Çü ÀÌµ¿
+            // ï¿½âº» ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
             Vector3 newPos = Vector3.Lerp(from, to, t);
 
-            // Á¡ÇÁ ÁßÀÌ¶ó¸é Æ÷¹°¼± ³ôÀÌ Ãß°¡
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
             if (isJump)
             {
-                float height = jumpHeight * Mathf.Sin(t * Mathf.PI); // Æ÷¹°¼± °î¼±
+                float height = jumpHeight * Mathf.Sin(t * Mathf.PI); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½î¼±
                 newPos.y += height;
             }
 
             _bossAnimation.transform.position = newPos;
-            yield return null; // ´ÙÀ½ ÇÁ·¹ÀÓ±îÁö ´ë±â
+            yield return null; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ó±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         }
 
-        // Á¤È®È÷ ¸ñÇ¥ À§Ä¡¿¡ µµ´ÞÇÏµµ·Ï º¸Á¤
+        // ï¿½ï¿½È®ï¿½ï¿½ ï¿½ï¿½Ç¥ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         _bossAnimation.transform.position = to;
     }
 }

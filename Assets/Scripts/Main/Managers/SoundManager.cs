@@ -12,6 +12,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip bgm;
     [Tooltip("BGM 볼륨")]
     [SerializeField] private float bgmVolume;
+    
+    [Header("플레이어 사운드")]
     [Tooltip("대쉬 사운드")]
     [SerializeField] private AudioClip dashSound;
     [Tooltip("대쉬 사운드 볼륨")]
@@ -20,18 +22,6 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip[] swordSound;
     [Tooltip("검 휘두르는 사운드 볼륨")]
     [SerializeField] private float swordSoundVolume;
-    [Tooltip("표창 사운드")]
-    [SerializeField] private AudioClip kunaiSound;
-    [Tooltip("표창 사운드 볼륨")]
-    [SerializeField] private float kunaiSoundVolume;
-    [Tooltip("나선환 사운드")]
-    [SerializeField] private AudioClip rasenganSound;
-    [Tooltip("나선환 사운드 볼륨")]
-    [SerializeField] private float rasenganSoundVolume;
-    [Tooltip("기합 사운드")]
-    [SerializeField] private AudioClip shoutSound;
-    [Tooltip("기합 사운드 볼륨")]
-    [SerializeField] private float shoutSoundVolume;
     [Tooltip("피격 사운드")]
     [SerializeField] private AudioClip hitSound;
     [Tooltip("피격 사운드 볼륨")]
@@ -44,6 +34,24 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip walkSound;
     [Tooltip("걷기 사운드 볼륨")]
     [SerializeField] private float walkSoundVolume;
+    
+    [Header("보스 사운드")]
+    [Tooltip("보스 칼질 사운드")]
+    [SerializeField] private AudioClip bossSwordSound;
+    [Tooltip("보스 칼질 사운드 볼륨")]
+    [SerializeField] private float bossSwordSoundVolume;
+    [Tooltip("표창 사운드")]
+    [SerializeField] private AudioClip kunaiSound;
+    [Tooltip("표창 사운드 볼륨")]
+    [SerializeField] private float kunaiSoundVolume;
+    [Tooltip("나선환 사운드")]
+    [SerializeField] private AudioClip rasenganSound;
+    [Tooltip("나선환 사운드 볼륨")]
+    [SerializeField] private float rasenganSoundVolume;
+    [Tooltip("기합 사운드")]
+    [SerializeField] private AudioClip shoutSound;
+    [Tooltip("기합 사운드 볼륨")]
+    [SerializeField] private float shoutSoundVolume;
     [Tooltip("연막탄 사운드")]
     [SerializeField] private AudioClip smokeSound;
     [Tooltip("연막탄 사운드 볼륨")]
@@ -117,6 +125,11 @@ public class SoundManager : MonoBehaviour
     public void PlaySmokeSound()
     {
         PlaySound(smokeSound, smokeSoundVolume);
+    }
+
+    public void PlayBossSwordSound()
+    {
+        PlaySound(bossSwordSound, bossSwordSoundVolume);
     }
     
 
