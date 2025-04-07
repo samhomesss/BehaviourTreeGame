@@ -166,6 +166,28 @@
                 },
                 {
                     "name": "",
+                    "id": "098c5544-4bbd-4b13-bd86-34f0fce35ed1",
+                    "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b49269ed-3bdb-4667-a93d-a260786aeac4",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4043dc24-219f-4bac-9892-604cf77df079",
                     "path": "<XInputController>/buttonWest",
                     "interactions": "",
