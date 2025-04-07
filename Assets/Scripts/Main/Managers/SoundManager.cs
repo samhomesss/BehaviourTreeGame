@@ -4,8 +4,11 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
-    [SerializeField] private AudioSource actionAudioSource; // 단발 오디오 소스 (클릭, 피격음 등)
-
+    [Tooltip("플레이어 사운드소스")]
+    [SerializeField] private AudioSource playerAudioSource; // 플레이어 사운드 소스 (대쉬, 걷기 등)
+    [Tooltip("보스 사운드 소스")]
+    [SerializeField] private AudioSource bossAudioSource; // 보스 사운드 소스 (보스 공격 등)
+    
     [SerializeField] private AudioSource bgmAudioSource;
     
     [Tooltip("BGM")]
@@ -56,6 +59,10 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip smokeSound;
     [Tooltip("연막탄 사운드 볼륨")]
     [SerializeField] private float smokeSoundVolume;
+    [Tooltip("착지 사운드")]
+    [SerializeField] private AudioClip koongSound;
+    [Tooltip("착지 사운드 볼륨")]
+    [SerializeField] private float koongSoundVolume;
     
 
     private void Awake()
@@ -82,68 +89,94 @@ public class SoundManager : MonoBehaviour
             bgmAudioSource.Play();
         }
     }
+    
+    /// <summary>
+    /// 플레이어 사운드 재생
+    /// </summary>
 
     public void PlayDashSound()
     {
-        PlaySound(dashSound, dashSoundVolume);
+        PlayPlayerSound(dashSound, dashSoundVolume);
     }
     public void PlaySwordSound(int num)
     {
-        PlaySound(swordSound[num], swordSoundVolume);
-    }
-
-    public void PlayKunaiSound()
-    {
-        PlaySound(kunaiSound, kunaiSoundVolume);
-    }
-
-    public void PlayRasenganSound()
-    {
-        PlaySound(rasenganSound, rasenganSoundVolume);
-    }
-
-    public void PlayShoutSound()
-    {
-        PlaySound(shoutSound, shoutSoundVolume);
+        PlayPlayerSound(swordSound[num], swordSoundVolume);
     }
 
     public void PlayHitSound()
     {
-        PlaySound(hitSound, hitSoundVolume);
+        PlayPlayerSound(hitSound, hitSoundVolume);
     }
 
     public void PlayPowerHitSound()
     {
-        PlaySound(powerHitSound, powerHitSoundVolume);
+        PlayPlayerSound(powerHitSound, powerHitSoundVolume);
     }
 
     public void PlayWalkSound()
     {
-        PlaySound(walkSound, walkSoundVolume);
+        PlayPlayerSound(walkSound, walkSoundVolume);
     }
 
+    
+    /// <summary>
+    /// 보스 사운드 재생
+    /// </summary>
     public void PlaySmokeSound()
     {
-        PlaySound(smokeSound, smokeSoundVolume);
+        PlayBossSound(smokeSound, smokeSoundVolume);
     }
 
     public void PlayBossSwordSound()
     {
-        PlaySound(bossSwordSound, bossSwordSoundVolume);
+        PlayBossSound(bossSwordSound, bossSwordSoundVolume);
+    }
+    
+    public void PlayKoongSound()
+    {
+        PlayBossSound(koongSound, koongSoundVolume);
+    }
+
+    public void PlayKunaiSound()
+    {
+        PlayBossSound(kunaiSound, kunaiSoundVolume);
+    }
+
+    public void PlayRasenganSound()
+    {
+        PlayBossSound(rasenganSound, rasenganSoundVolume);
+    }
+
+    public void PlayShoutSound()
+    {
+        PlayBossSound(shoutSound, shoutSoundVolume);
     }
     
 
-    private void PlaySound(AudioClip clip, float volume)
+    private void PlayPlayerSound(AudioClip clip, float volume)
     {
-        if (clip != null && actionAudioSource != null)
+        if (clip != null && playerAudioSource != null)
         {
-            actionAudioSource.PlayOneShot(clip, volume);
+            playerAudioSource.PlayOneShot(clip, volume);
+        }
+    }
+    private void PlayBossSound(AudioClip clip, float volume)
+    {
+        if (clip != null && bossAudioSource != null)
+        {
+            bossAudioSource.PlayOneShot(clip, volume);
         }
     }
 
-    private void StopSound()
+    private void StopPlayerSound()
     {
-        Debug.Log("사운드 정지");
-        actionAudioSource.Stop();
+        Debug.Log("플레이어 사운드 정지");
+        playerAudioSource.Stop();
+    }
+
+    private void StopBossSound()
+    {
+        Debug.Log("보스 사운드 정지");
+        bossAudioSource.Stop();
     }
 }
