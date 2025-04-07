@@ -9,12 +9,21 @@ public class MainGameStartButton : MonoBehaviour
     void Start()
     {
         _button = GetComponent<Button>();
+        if (_button == null)
+        {
+            return;
+        }
         _button.onClick.AddListener(ButtonClick);
     }
 
     void ButtonClick()
     {
         SceneManager.LoadScene("MainScene");
+    }
+
+    public void TitleScene()
+    {
+        SceneManager.LoadScene("TitleScene");
     }
 
     
