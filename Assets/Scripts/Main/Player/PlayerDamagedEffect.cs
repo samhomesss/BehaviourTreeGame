@@ -20,6 +20,8 @@ public class PlayerDamagedEffect : MonoBehaviour
         if (playerHp <= 0)
         {
             // todo : 입력정지 코드
+            Managers.InputManager.SetPlayerMoveable(false);
+            PlayerStateManager.IsDeath = true;
             _animator.Play("DEATH");
         }
     }

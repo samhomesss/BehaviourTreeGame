@@ -81,6 +81,12 @@ public class PlayerStateManager : MonoBehaviour
         set { Instance._isAttackCooltime = value; }
     }
 
+    public static bool IsDeath
+    {
+        get { return Instance._isDeath; }
+        set { Instance._isDeath = value; }
+    }
+
     Rigidbody2D _playerRigid;
     float _playerSpeed = 14.5f;//9.5f; // 플레이어 Max Speed 에 가깝다.
     float _playerJumpPower = 30f;
@@ -102,6 +108,8 @@ public class PlayerStateManager : MonoBehaviour
     bool _isAttacking = false;
     int _combo = 0;
     bool _isAttackCooltime = false;
+
+    bool _isDeath = false;
 
     private void Awake()
     {
