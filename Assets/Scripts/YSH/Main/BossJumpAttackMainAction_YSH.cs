@@ -13,9 +13,9 @@ public partial class BossJumpAttackMainAction_YSH : Action
 
     const float JumpHeight = 1.5f; // 점프 높이 
     const float JumpSpeed = 0.05f; // 올라가는 속도
-    const float FallSpeed = 0.02f;  // 떨어지는 속도 
-    const float JumpDuration = 5f; // Duration
-    const float FallDuration = 8f; // Duration
+    const float FallSpeed = 5f;  // 떨어지는 속도 
+    const float JumpDuration = 12f; // Duration
+    const float FallDuration = 5f; // Duration
 
     Vector2 _jumpStartTargetPos; // 점프 시작할때 플레이어 머리 위로 이동할 변수 
     Vector2 _jumpAttackTarget; // 떨어지는 지점 
@@ -40,7 +40,6 @@ public partial class BossJumpAttackMainAction_YSH : Action
     {
         if (!_isFalling) // 올라가는 상태
         {
-            
             _jumpStartTargetPos = new Vector2(player.transform.position.x, JumpHeight); // 포지션을 계속 변경 하기 위함
             UpdateJumpPhase();
         }
@@ -61,6 +60,7 @@ public partial class BossJumpAttackMainAction_YSH : Action
 
         if (_timer >= JumpDuration) // 떨어질때 되었다 싶으면
         {
+            Debug.Log("떨어지기 시작");
             _isFalling = true; // 떨어지는거 만들어 주고 
             _timer = 0f; // Timer = 0 으로 만들어주고 
 
@@ -70,18 +70,15 @@ public partial class BossJumpAttackMainAction_YSH : Action
     // 떨어질 때 
     private Status UpdateFallPhase()
     {
-
         _timer += Time.fixedDeltaTime; // 시간 늘리고 
 
         Vector2 fallTarget = new Vector2(_jumpAttackTarget.x, _bossOriginalPosY); // 원래 위치를 받아서 떨어질때 타겟으로 사용 
-        //Vector2 fallTarget = new Vector2(_jumpStartTargetPos.x, _bossOriginalPosY); // 원래 위치를 받아서 떨어질때 타겟으로 사용 
-        float fallProgress = Mathf.Clamp01(_timer / FallDuration); 
 
         Self.Value.transform.position = Vector2.Lerp(Self.Value.transform.position, fallTarget, FallSpeed);
 
-        if (fallProgress >= 1f) // 떨어지다 시간 못맞추면 
+        if (_timer >= FallDuration) // 떨어지다 시간 못맞추면 
         {
-            Self.Value.transform.position = fallTarget; // 정확히 목표 위치로 설정
+            //Self.Value.transform.position = fallTarget; // 정확히 목표 위치로 설정
             return Status.Success;
         }
 

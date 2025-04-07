@@ -289,11 +289,20 @@ MonoBehaviour:
   m_BlackboardVariableOverridesList:
   - rid: 3825597982118510592
   - rid: 3825597992608203171
+  - rid: 2880368790957981838
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
+    - rid: 2880368790957981838
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 2506235027689369700
+          m_Value1: 10916740134005630990
+        Name: CurrentDistance
+        m_Value: 15
     - rid: 3825597982118510592
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:

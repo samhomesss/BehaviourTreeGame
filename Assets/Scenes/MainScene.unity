@@ -11875,9 +11875,38 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: 'managedReferences[2880368790957981838]'
+      value: 'Unity.Behavior Unity.Behavior.BlackboardVariable`1[[System.Single,
+        mscorlib]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[2880368790957981838].Name
+      value: CurrentDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_BlackboardVariableOverridesList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[2880368790957981838].m_Value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: managedReferences[3825597992608203171].m_Value
       value: 
       objectReference: {fileID: 1920845862}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: 'm_BlackboardVariableOverridesList.Array.data[2]'
+      value: 2880368790957981838
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[2880368790957981838].GUID.m_Value0
+      value: 2506235027689369700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: managedReferences[2880368790957981838].GUID.m_Value1
+      value: 10916740134005630990
+      objectReference: {fileID: 0}
     - target: {fileID: 7533103485244763447, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: attackDamage
       value: 2
