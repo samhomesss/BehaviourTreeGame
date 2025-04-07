@@ -16,12 +16,14 @@ public partial class MainUpAttackAction : Action
     private int _animationHash;
     private Rigidbody2D _rb;
     private Vector2 dir;
+    private BossAnimationEventController _controller;
 
     protected override Status OnStart()
     {
         _animator = Self.Value.GetComponent<Animator>();
         _animationHash = Animator.StringToHash(CurrentState.Value.ToString());
         _rb = Self.Value.GetComponent<Rigidbody2D>();
+        _controller = Self.Value.GetComponent<BossAnimationEventController>();
 
         Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("IsAttacking", true);
         if (CurrentDirection.Value > 0)
@@ -42,6 +44,7 @@ public partial class MainUpAttackAction : Action
     {
         if(CurrentDistance.Value > 10f)
         {
+            _controller.GetAttackSpecialEnd();
             // 아래대쉬베기 패턴으로 연결
             return Status.Failure;
         }
