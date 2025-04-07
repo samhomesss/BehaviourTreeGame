@@ -35,6 +35,7 @@ public class PlayerDash : MonoBehaviour
     {
         if (!_isDashing && _haveDashChance)
         {
+            SoundManager.Instance.PlayDashSound();
             PlayerStateManager.IsDashing = true;
             _isDashing = true; 
             _dashStartTimer = _dashStartDuration;
@@ -49,13 +50,13 @@ public class PlayerDash : MonoBehaviour
     {
         _moveDir = Managers.InputManager.MoveVec;
 
-        if (_moveDir.x == 0) // ¹æÇâÅ° ÀÔ·ÂÀÌ ¾ø´Ù¸é
+        if (_moveDir.x == 0) // ï¿½ï¿½ï¿½ï¿½Å° ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¸ï¿½
         {
-            if (PlayerStateManager.FilpX) // ¿À¸¥ÂÊ
+            if (PlayerStateManager.FilpX) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             {
                 _moveDir.x = -1;
             }
-            else // ¿ÞÂÊ
+            else // ï¿½ï¿½ï¿½ï¿½
             {
                 _moveDir.x = 1;
             }
@@ -65,25 +66,25 @@ public class PlayerDash : MonoBehaviour
 
         StartCoroutine(SpawnShadows());
 
-        // ´ë½Ã ½ÃÀÛ ´Ü°è
+        // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ü°ï¿½
         while (_dashStartTimer > 0f)
         {
-            _dashStartTimer -= Time.deltaTime; // Å¸ÀÌ¸Ó °¨¼Ò
+            _dashStartTimer -= Time.deltaTime; // Å¸ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½
             PlayerStateManager.PlayerRigid.gravityScale = 0f;
             PlayerStateManager.PlayerRigid.linearVelocity = _moveDir * _dashSpeed;
             yield return null;
         }
 
-        // ´ë½Ã Á¾·á ´Ü°è
+        // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ü°ï¿½
         while (_dashEndTimer > 0f)
         {
-            _dashEndTimer -= Time.deltaTime; // Å¸ÀÌ¸Ó °¨¼Ò
+            _dashEndTimer -= Time.deltaTime; // Å¸ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½
             PlayerStateManager.PlayerRigid.gravityScale = _originalGravity;
             PlayerStateManager.PlayerRigid.linearVelocity = _moveDir * _dashEndSpeed;
             yield return null;
         }
 
-        // ´ë½Ã ¿Ï·á ÈÄ
+        // ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½ ï¿½ï¿½
         PlayerStateManager.IsDashing = false;
         _isDashing = false;
         _haveDashChance = false;
