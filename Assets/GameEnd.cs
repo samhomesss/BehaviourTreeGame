@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameEnd : MonoBehaviour
 {
     public void EndGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("ThankyouScene");
     }
 }
