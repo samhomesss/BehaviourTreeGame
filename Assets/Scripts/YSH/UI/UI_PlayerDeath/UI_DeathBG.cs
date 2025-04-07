@@ -12,6 +12,16 @@ public class UI_DeathBG : MonoBehaviour
         _button.onClick.AddListener(ButtonClick);
     }
 
+    private void Update()
+    {
+        if (Input.anyKeyDown && _button.enabled)
+        {
+            Debug.Log("눌림");
+            ButtonClick();
+        }
+    }
+
+
     void ButtonClick()
     {
         Debug.Log("버튼 눌림");
