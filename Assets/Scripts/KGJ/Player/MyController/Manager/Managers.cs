@@ -28,7 +28,8 @@ public class Managers : MonoBehaviour
         else
             _instance = this;
 
-       // DontDestroyOnLoad(this);
+        Screen.SetResolution(1920, 1080, FullScreenMode.FullScreenWindow);
+        // DontDestroyOnLoad(this);
         // 다른 매니저들 Init 해주면 됨 
         InputManager.Init();
         CameraTargetManager.Init();
