@@ -13,9 +13,9 @@ public partial class BossJumpAttackMainAction_YSH : Action
 
     const float JumpHeight = 1.5f; // 점프 높이 
     const float JumpSpeed = 0.05f; // 올라가는 속도
-    const float FallSpeed = 6f;  // 떨어지는 속도 
-    const float JumpDuration = 14f; // Duration
-    const float FallDuration = 6f; // Duration
+    const float FallSpeed = 8f;  // 떨어지는 속도 
+    const float JumpDuration = 16f; // Duration
+    const float FallDuration = 8f; // Duration
 
     Vector2 _jumpStartTargetPos; // 점프 시작할때 플레이어 머리 위로 이동할 변수 
     Vector2 _jumpAttackTarget; // 떨어지는 지점 
