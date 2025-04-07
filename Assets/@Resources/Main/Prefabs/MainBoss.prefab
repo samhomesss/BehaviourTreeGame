@@ -82,8 +82,8 @@ PolygonCollider2D:
     - - {x: 0.034705676, y: 3.5797918}
       - {x: -2.4665394, y: 2.5417514}
       - {x: -1.9991512, y: 1.5625404}
-      - {x: 1.2063665, y: 1.6336546}
-      - {x: 0.6164433, y: 2.0241103}
+      - {x: -0.50412095, y: 1.5711709}
+      - {x: -0.30518943, y: 1.9850581}
       - {x: -1.5061262, y: 1.8633233}
       - {x: -2.0452037, y: 2.4839087}
   m_UseDelaunayMesh: 0
@@ -523,8 +523,8 @@ PolygonCollider2D:
       - {x: -0.24294013, y: 3.1748915}
       - {x: -2.7094793, y: 2.171557}
       - {x: -2.2420912, y: 1.2039145}
-      - {x: 0.6597863, y: 1.2701826}
-      - {x: 0.113473654, y: 1.6782258}
+      - {x: -0.9979722, y: 1.2014463}
+      - {x: -1.0631309, y: 1.5569264}
       - {x: -1.7791266, y: 1.5121484}
   m_UseDelaunayMesh: 0
 --- !u!114 &7031224400715843718
@@ -550,8 +550,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3750369011946738337}
-  - component: {fileID: 3595848368083458572}
   - component: {fileID: 998056882550316159}
+  - component: {fileID: 4273998853226992180}
   m_Layer: 9
   m_Name: Collider_Attack2
   m_TagString: Untagged
@@ -574,14 +574,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1915832097999717245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &3595848368083458572
+--- !u!114 &998056882550316159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4358952591079015032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: "\uBCF4\uC2A42\uD3C9\uD0C0"
+  attackDamage: 1
+--- !u!60 &4273998853226992180
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4358952591079015032}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -604,7 +618,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -620,30 +634,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.04627448, y: 3.2558718}
-      - {x: -2.501245, y: 2.2294002}
-      - {x: -1.9528769, y: 1.2617574}
-      - {x: 0.98826456, y: 1.3309224}
-      - {x: 0.31190592, y: 3.0864646}
-      - {x: -0.059567273, y: 2.2049136}
-      - {x: 0.2952999, y: 1.7376574}
-      - {x: -1.4251462, y: 1.5394032}
-      - {x: -2.0567725, y: 2.1715572}
+    - - {x: -0.02288708, y: 3.2314887}
+      - {x: -2.4730465, y: 2.2544174}
+      - {x: -1.9953396, y: 1.2508187}
+      - {x: -0.053052783, y: 1.2737061}
+      - {x: -0.25459403, y: 1.6359237}
+      - {x: -1.5030172, y: 1.5821744}
+      - {x: -2.0585928, y: 2.1628695}
   m_UseDelaunayMesh: 0
---- !u!114 &998056882550316159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4358952591079015032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackName: "\uBCF4\uC2A42\uD3C9\uD0C0"
-  attackDamage: 1
 --- !u!1 &8327302354520743862
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,12 +723,12 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -2.3813205, y: 1.9851803}
       - {x: -1.8021389, y: 2.5615544}
-      - {x: -0.047099993, y: 2.3845282}
-      - {x: 0.65940905, y: 2.7815602}
+      - {x: -0.6307206, y: 2.441746}
+      - {x: -0.5192748, y: 2.8273346}
       - {x: -2.293011, y: 2.8656714}
       - {x: -2.7858138, y: 1.8864601}
-      - {x: -0.45338595, y: 0.9147005}
-      - {x: -0.29834974, y: 0.88744575}
+      - {x: -1.0713369, y: 1.1664584}
+      - {x: -0.9506311, y: 1.1964211}
   m_UseDelaunayMesh: 0
 --- !u!114 &7533103485244763447
 MonoBehaviour:
@@ -929,7 +927,7 @@ PolygonCollider2D:
       - {x: -0.7687537, y: 4.9819717}
       - {x: -1.3041576, y: 3.9455166}
       - {x: -1.2550166, y: 2.0504608}
-      - {x: -0.25523925, y: 0.8771243}
+      - {x: -0.9660419, y: 2.124978}
       - {x: -0.83514696, y: 2.133188}
       - {x: -0.44733593, y: 4.3232255}
   m_UseDelaunayMesh: 0

@@ -11507,6 +11507,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1739217939760040733, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1915832097999717245, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.39
@@ -11550,6 +11554,10 @@ PrefabInstance:
     - target: {fileID: 2331395187402205944, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: m_Name
       value: MainBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273998853226992180, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: managedReferences[3825597992608203171].m_Value
