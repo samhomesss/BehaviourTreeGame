@@ -15,6 +15,7 @@ public class BossCollider : MonoBehaviour
                 return;
             }
             Debug.Log("받은 공격 : " + attack.attackName.ToString());
+            attack.ShowAttackEffect();
             BossHpManager.BossHpDamageManager.BossDamaged(attack.attackDamage);
         }
     }
