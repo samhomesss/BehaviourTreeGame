@@ -9678,6 +9678,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5274490379059558112, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6903809457910609251, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
       propertyPath: attackName
       value: PlayerAttack

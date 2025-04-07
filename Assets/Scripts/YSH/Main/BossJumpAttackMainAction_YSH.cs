@@ -11,11 +11,9 @@ public partial class BossJumpAttackMainAction_YSH : Action
     [SerializeReference] public BlackboardVariable<GameObject> Self;
     [SerializeReference] public BlackboardVariable<MainBossState> CurrentState;
 
-    const float JumpHeight = 1.5f; // 점프 높이 
+    const float JumpHeight = 2f; // 점프 높이 
     const float JumpSpeed = 0.05f; // 올라가는 속도
-    const float FallSpeed = 8f;  // 떨어지는 속도 
-    const float JumpDuration = 16f; // Duration
-    const float FallDuration = 8f; // Duration
+    const float JumpDuration = 8f; // Duration
 
     Vector2 _jumpStartTargetPos; // 점프 시작할때 플레이어 머리 위로 이동할 변수 
     Vector2 _jumpAttackTarget; // 떨어지는 지점 
@@ -23,11 +21,13 @@ public partial class BossJumpAttackMainAction_YSH : Action
     float _bossOriginalPosY = -3.75f; // 보스를 원래대로 돌리기 위함
     bool _isFalling; // 떨어지는 중
     PlayerStateManager player; // 플레이어 참조 
+    Rigidbody2D _rb;
 
     protected override Status OnStart()
     {
         player = GameObject.FindAnyObjectByType<PlayerStateManager>();
         if (player == null) return Status.Failure; // 플레이어 없으면 바로 실패 반환 
+        _rb = Self.Value.GetComponent<Rigidbody2D>();
 
         _jumpStartTargetPos = new Vector2(player.transform.position.x, JumpHeight); // 플레이어 위로 가기 위함 
         _timer = 0f; // 시간 초기화 
@@ -70,24 +70,29 @@ public partial class BossJumpAttackMainAction_YSH : Action
     // 떨어질 때 
     private Status UpdateFallPhase()
     {
-        _timer += Time.fixedDeltaTime; // 시간 늘리고 
+        //_timer += Time.fixedDeltaTime; // 시간 늘리고 
 
-        Vector2 fallTarget = new Vector2(_jumpAttackTarget.x, _bossOriginalPosY); // 원래 위치를 받아서 떨어질때 타겟으로 사용 
+        //Self.Value.transform.position = Vector2.Lerp(Self.Value.transform.position, _jumpAttackTarget, _timer/FallDuration);
 
-        Self.Value.transform.position = Vector2.Lerp(Self.Value.transform.position, fallTarget, FallSpeed);
+        //if (_timer >= FallDuration) // 떨어지다 시간 못맞추면 
+        //{
+        //    //Self.Value.transform.position = fallTarget; // 정확히 목표 위치로 설정
+        //    return Status.Success;
+        //}
+        _rb.gravityScale = 5f;
 
-        if (_timer >= FallDuration) // 떨어지다 시간 못맞추면 
+        if(Mathf.Abs(Self.Value.transform.position.y - _bossOriginalPosY) < 0.5f)
         {
-            //Self.Value.transform.position = fallTarget; // 정확히 목표 위치로 설정
-            return Status.Success;
+            return Status.Success; // 원래 위치에 도착하면 성공
         }
-
+        
         return Status.Running;
     }
 
     protected override void OnEnd()
     {
         _timer = 0f;
+        _rb.gravityScale = 1f; // 중력 초기화
         _isFalling = false;
         Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("CurrentState", MainBossState.IDLE); // 공격 상태 해제
     }
