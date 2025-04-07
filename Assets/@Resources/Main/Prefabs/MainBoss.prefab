@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 8650694712894707914}
   - component: {fileID: 6538998051327896565}
   - component: {fileID: 9086915142127282128}
+  - component: {fileID: 1825456463130618348}
   m_Layer: 7
   m_Name: MainBoss
   m_TagString: Untagged
@@ -440,6 +441,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _earthquake: {fileID: 0}
   _wave: {fileID: 0}
+  _hit: {fileID: 0}
+--- !u!114 &1825456463130618348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331395187402205944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e854650ac2d38408648dcfffc64579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2624140973452944628
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +609,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4358952591079015032}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

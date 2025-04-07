@@ -9861,6 +9861,18 @@ PrefabInstance:
       propertyPath: bgmAudioSource
       value: 
       objectReference: {fileID: 1017083399}
+    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+      propertyPath: bossSwordSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 51e02b0fdbe6179468306211c810b0e2, type: 3}
+    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+      propertyPath: bossSwordSoundVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544892982768498321, guid: dd29f02a90aa7c546a3039ce024ae918, type: 3}
+      propertyPath: 'swordSound.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c48ea77d6879a4459c06bf8a60b127f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
