@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.Behavior;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossDamagedEffect : MonoBehaviour
 {
@@ -30,7 +31,14 @@ public class BossDamagedEffect : MonoBehaviour
         {
             _behaviorGraphAgent.enabled = false;
             _animator.Play("DEATH");
+            StartCoroutine(LoadScene());   
         }
+    }
+
+    IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Ending");
     }
 
     private void DamagedEffect()
