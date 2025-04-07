@@ -26,9 +26,9 @@ public class SoundManager : MonoBehaviour
     [Tooltip("검 휘두르는 사운드 볼륨")]
     [SerializeField] private float swordSoundVolume;
     [Tooltip("피격 사운드")]
-    [SerializeField] private AudioClip hitSound;
+    [SerializeField] private AudioClip playerHitSound;
     [Tooltip("피격 사운드 볼륨")]
-    [SerializeField] private float hitSoundVolume;
+    [SerializeField] private float playerHitSoundVolume;
     [Tooltip("강한 피격 사운드")]
     [SerializeField] private AudioClip powerHitSound;
     [Tooltip("강한 피격 사운드 볼륨")]
@@ -39,6 +39,10 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private float walkSoundVolume;
     
     [Header("보스 사운드")]
+    [Tooltip("보스 피격 사운드")]
+    [SerializeField] private AudioClip bossHitSound;
+    [Tooltip("보스 피격 사운드 볼륨")]
+    [SerializeField] private float bossHitSoundVolume;
     [Tooltip("보스 칼질 사운드")]
     [SerializeField] private AudioClip bossSwordSound;
     [Tooltip("보스 칼질 사운드 볼륨")]
@@ -63,6 +67,10 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip koongSound;
     [Tooltip("착지 사운드 볼륨")]
     [SerializeField] private float koongSoundVolume;
+    [Tooltip("검기 사운드")]
+    [SerializeField] private AudioClip bossSwordForceSound;
+    [Tooltip("검기 사운드 볼륨")]
+    [SerializeField] private float bossSwordForceSoundVolume;
     
 
     private void Awake()
@@ -103,9 +111,9 @@ public class SoundManager : MonoBehaviour
         PlayPlayerSound(swordSound[num], swordSoundVolume);
     }
 
-    public void PlayHitSound()
+    public void PlayPlayerHitSound()
     {
-        PlayPlayerSound(hitSound, hitSoundVolume);
+        PlayPlayerSound(playerHitSound, playerHitSoundVolume);
     }
 
     public void PlayPowerHitSound()
@@ -122,6 +130,10 @@ public class SoundManager : MonoBehaviour
     /// <summary>
     /// 보스 사운드 재생
     /// </summary>
+    public void PlayBossHitSound()
+    {
+        PlayBossSound(bossHitSound, bossHitSoundVolume);
+    }
     public void PlaySmokeSound()
     {
         PlayBossSound(smokeSound, smokeSoundVolume);
@@ -150,6 +162,10 @@ public class SoundManager : MonoBehaviour
     public void PlayShoutSound()
     {
         PlayBossSound(shoutSound, shoutSoundVolume);
+    }
+    public void PlayBossSwordForceSound()
+    {
+        PlayBossSound(bossSwordForceSound, bossSwordForceSoundVolume);
     }
     
 
