@@ -7,7 +7,7 @@ public class BossDamagedEffect : MonoBehaviour
     private BehaviorGraphAgent _behaviorGraphAgent;
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
-    private Color damagedColor = new Color(1, 0.6f, 0.6f, 1);
+    private Color damagedColor = new Color(1, 0.4f, 0.4f, 1);
 
     private void Start()
     {
@@ -45,7 +45,7 @@ public class BossDamagedEffect : MonoBehaviour
         while (time < 0.3f)
         {
             float t = time / 0.3f;
-            float gb = Mathf.Lerp(150f / 255f, 1f, t);
+            float gb = Mathf.Lerp(0.4f, 1f, t);
             _spriteRenderer.color = new Color(1,gb,gb,1);
 
             time += Time.deltaTime;
