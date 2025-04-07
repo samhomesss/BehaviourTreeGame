@@ -11,8 +11,7 @@ public class PlayerAnimator : MonoBehaviour
 
     void Update()
     {
-        
-        if (!PlayerStateManager.IsAttackCooltime && PlayerStateManager.IsAttacking)
+        if (!PlayerStateManager.IsDeath && !PlayerStateManager.IsAttackCooltime && PlayerStateManager.IsAttacking)
         {
             if (PlayerStateManager.Combo == 0)
                 _animator.Play("ATK1");
@@ -23,19 +22,19 @@ public class PlayerAnimator : MonoBehaviour
 
             PlayerStateManager.IsAttackCooltime = true;
         }
-        else if (!PlayerStateManager.IsAttacking && PlayerStateManager.IsDashing)
+        else if (!PlayerStateManager.IsDeath && !PlayerStateManager.IsAttacking && PlayerStateManager.IsDashing)
         {
             _animator.Play("DASH");
         }
-        else if (!PlayerStateManager.IsAttacking &&  PlayerStateManager.IsJumping)
+        else if (!PlayerStateManager.IsDeath && !PlayerStateManager.IsAttacking &&  PlayerStateManager.IsJumping)
         {
             _animator.Play("JUMP");
         }
-        else if (!PlayerStateManager.IsAttacking &&  !PlayerStateManager.IsJumping && Managers.InputManager.IsMove)
+        else if (!PlayerStateManager.IsDeath && !PlayerStateManager.IsAttacking &&  !PlayerStateManager.IsJumping && Managers.InputManager.IsMove)
         {
             _animator.Play("RUN");
         }
-        else if (!PlayerStateManager.IsAttacking &&  !PlayerStateManager.IsJumping && !Managers.InputManager.IsMove)
+        else if (!PlayerStateManager.IsDeath && !PlayerStateManager.IsAttacking &&  !PlayerStateManager.IsJumping && !Managers.InputManager.IsMove)
         {
             _animator.Play("IDLE");
         }
