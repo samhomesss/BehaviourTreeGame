@@ -4954,7 +4954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackName: "\uB77C\uC13C\uAC04!!"
-  attackDamage: 5
+  attackDamage: 8
 --- !u!1 &5931138061938882756
 GameObject:
   m_ObjectHideFlags: 0

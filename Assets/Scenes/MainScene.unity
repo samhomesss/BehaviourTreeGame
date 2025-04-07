@@ -9666,6 +9666,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4845795259895161434, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5244131510626462355, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903809457910609251, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+      propertyPath: attackName
+      value: PlayerAttack_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378810743033363463, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+      propertyPath: attackName
+      value: PlayerAttack_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7715734532535876114, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759907212427185465, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+      propertyPath: attackName
+      value: PlayerAttack_3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11616,6 +11640,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 998056882550316159, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: attackDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1739217939760040733, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -11664,14 +11692,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 3860177564108540976, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4273998853226992180, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273998853226992180, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572653401295559849, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: attackDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7031224400715843718, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: attackDamage
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7150632894982699580, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: managedReferences[3825597992608203171].m_Value
       value: 
       objectReference: {fileID: 1920845862}
+    - target: {fileID: 7533103485244763447, guid: cf069580807ebe046baa4992edbd371f, type: 3}
+      propertyPath: attackDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9086915142127282128, guid: cf069580807ebe046baa4992edbd371f, type: 3}
       propertyPath: _hit
       value: 

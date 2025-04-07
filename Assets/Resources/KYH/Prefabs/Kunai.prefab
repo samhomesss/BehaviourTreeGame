@@ -211,4 +211,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b6f9c2f1408db4fb6836bec92be5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackName: "\uD45C\uCC3D"
   attackDamage: 1
