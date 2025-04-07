@@ -9678,6 +9678,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5274490379059558112, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6903809457910609251, guid: 394ccfc8a590eaa4da0d662c8b164ba3, type: 3}
       propertyPath: attackName
       value: PlayerAttack
@@ -10552,7 +10556,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

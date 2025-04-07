@@ -4,7 +4,6 @@ using Unity.Behavior;
 using UnityEngine;
 using Action = Unity.Behavior.Action;
 using Unity.Properties;
-using Unity.Mathematics;
 
 [Serializable, GeneratePropertyBag]
 [NodeDescription(name: "MovePosition", story: "[Self] [BossSwordForcePos] [CurrentDirection]", category: "Action", id: "73ac63cad77644a89023da63e6221b24")]

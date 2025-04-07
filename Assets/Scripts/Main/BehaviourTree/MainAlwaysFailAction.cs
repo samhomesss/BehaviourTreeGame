@@ -1,6 +1,5 @@
 using System;
 using Unity.Behavior;
-using UnityEngine;
 using Action = Unity.Behavior.Action;
 using Unity.Properties;
 

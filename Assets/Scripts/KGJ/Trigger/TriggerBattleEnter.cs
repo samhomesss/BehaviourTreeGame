@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using Unity.Cinemachine; // Cinemachine ���ӽ����̽� ���
 
 public class TriggerBattleEnter : MonoBehaviour
 {
