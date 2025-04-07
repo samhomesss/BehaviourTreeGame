@@ -100,12 +100,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1b7b605b9d6e9134db9ec4aff25a0333, type: 3}
   - {fileID: 8300000, guid: 5d124b91f1726f84baaab088192dbed9, type: 3}
   swordSoundVolume: 0.2
-  hitSound: {fileID: 8300000, guid: c8ffe131008a17947b08ff00e90f0988, type: 3}
-  hitSoundVolume: 1.2
+  playerHitSound: {fileID: 8300000, guid: cd838b166cc11de4aa68fbcff85ee41c, type: 3}
+  playerHitSoundVolume: 0.8
   powerHitSound: {fileID: 0}
   powerHitSoundVolume: 0
   walkSound: {fileID: 8300000, guid: cb8b1aa9aca39ad47b920c0561c32c4c, type: 3}
   walkSoundVolume: 1
+  bossHitSound: {fileID: 8300000, guid: c8ffe131008a17947b08ff00e90f0988, type: 3}
+  bossHitSoundVolume: 1
   bossSwordSound: {fileID: 8300000, guid: 51e02b0fdbe6179468306211c810b0e2, type: 3}
   bossSwordSoundVolume: 0.8
   kunaiSound: {fileID: 8300000, guid: 1add7f06ca3a26243bd1b150e180885b, type: 3}
@@ -118,3 +120,5 @@ MonoBehaviour:
   smokeSoundVolume: 0.5
   koongSound: {fileID: 8300000, guid: 4c9a92a2024b09e40ba0cc64907b9048, type: 3}
   koongSoundVolume: 1
+  bossSwordForceSound: {fileID: 8300000, guid: 9071f66eaff319c4db41acb4a123323b, type: 3}
+  bossSwordForceSoundVolume: 1.3
