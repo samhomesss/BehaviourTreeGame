@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 560521735920064112}
   - component: {fileID: 5382795867576351511}
   - component: {fileID: 4346588877402536802}
+  - component: {fileID: 1229038618730843087}
   m_Layer: 0
   m_Name: EnterBossCam
   m_TagString: Untagged
@@ -225,6 +226,29 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
+--- !u!114 &1229038618730843087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080455916222459413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ApplyAfter: 2
+  ChannelMask: 1
+  Gain: 1
+  Use2DDistance: 0
+  UseCameraSpace: 1
+  ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    Duration: 1
+    m_NoiseOffsets: {x: 82.06714, y: 135.75949, z: 953.0447}
 --- !u!1 &6884347633935811918
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +423,7 @@ MonoBehaviour:
     AmplitudeGain: 1
     FrequencyGain: 1
     Duration: 1
-    m_NoiseOffsets: {x: 0, y: 0, z: 0}
+    m_NoiseOffsets: {x: 687.8369, y: -212.40439, z: 587.9137}
 --- !u!1 &7356378464349342609
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +626,7 @@ GameObject:
   - component: {fileID: 4124353818931005578}
   - component: {fileID: 2902054378652260907}
   - component: {fileID: 4188453351242433335}
+  - component: {fileID: 4852183350514533547}
   m_Layer: 0
   m_Name: ShadowCam
   m_TagString: Untagged
@@ -649,8 +674,8 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 12
-    NearClipPlane: 0.3
+    OrthographicSize: 11
+    NearClipPlane: 0.01
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
@@ -682,6 +707,29 @@ MonoBehaviour:
   Offset: {x: 0, y: 3, z: 0}
   ApplyAfter: 1
   PreserveComposition: 0
+--- !u!114 &4852183350514533547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169836271896535860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ApplyAfter: 2
+  ChannelMask: 1
+  Gain: 1
+  Use2DDistance: 0
+  UseCameraSpace: 1
+  ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    Duration: 1
+    m_NoiseOffsets: {x: -380.64038, y: -380.94247, z: -771.4558}
 --- !u!1 &8208212645830698935
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +741,7 @@ GameObject:
   - component: {fileID: 3549833309699806416}
   - component: {fileID: 7367111138126170595}
   - component: {fileID: 391709082623967804}
+  - component: {fileID: 4371434386823006628}
   m_Layer: 0
   m_Name: BossCam
   m_TagString: Untagged
@@ -789,6 +838,29 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
+--- !u!114 &4371434386823006628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8208212645830698935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ApplyAfter: 2
+  ChannelMask: 1
+  Gain: 1
+  Use2DDistance: 0
+  UseCameraSpace: 1
+  ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    Duration: 1
+    m_NoiseOffsets: {x: 987.26245, y: 430.7108, z: 355.4713}
 --- !u!1 &8408784940213490573
 GameObject:
   m_ObjectHideFlags: 0

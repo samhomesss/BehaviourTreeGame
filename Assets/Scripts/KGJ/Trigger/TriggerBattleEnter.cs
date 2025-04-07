@@ -34,6 +34,8 @@ public class TriggerBattleEnter : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        // TODO: 플레이어 움직임 막기
+        Managers.InputManager.SetPlayerMoveable(false);
         _cameraDirector.PlayTimeline(CameraType.Enter);
         
         StartCoroutine(MoveSequence());
@@ -57,6 +59,10 @@ public class TriggerBattleEnter : MonoBehaviour
 
         // 2단계: 점프 -> 도착 위치로 이동
         yield return StartCoroutine(MoveToPosition(jumpPos, endPos, fallDuration, false));
+
+        // TODO: 플레이어 움직임 풀기
+        Managers.InputManager.SetPlayerMoveable(true);
+
         yield return new WaitForSeconds(1.5f);
         _bossAnimation.SetActive(false);
         _boss.SetActive(true);

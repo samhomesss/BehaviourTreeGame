@@ -19,6 +19,18 @@ public class InputManager
         }
     }
 
+    public bool IsMoveable
+    {
+        get
+        {
+            return _isMoveable;
+        }
+        set
+        {
+            _isMoveable = value;
+        }
+    }
+
     InputSystem_Actions _myPlayerInputSystem; // 나의 InputSystem 가져오기 
     PlayerInput _playerInput;
     InputAction _moveAction; // 움직임 Action
@@ -30,6 +42,7 @@ public class InputManager
     bool _isMove; // 현재 움직이는가?
     bool _isJumpCut;
     bool _isJumpPress; // 점프 뛰었을때 
+    bool _isMoveable;
 
     public Action OnJumpEvent; // Jump 되었을때 Action 실행 
     public Action OnJumpCutEvent; // OnJumpCut Action
@@ -63,11 +76,13 @@ public class InputManager
         _attackAction.performed += OnAttack;
 
         _isJumpCut = false;
+        _isMoveable = true;
 
     }
 
     void OnMove(InputAction.CallbackContext context)
     {
+        if (!_isMoveable) return;
         if (context.phase == InputActionPhase.Performed)
         {
             Vector2 moveInput = context.ReadValue<Vector2>();
@@ -87,6 +102,7 @@ public class InputManager
 
     void OnJump(InputAction.CallbackContext context)
     {
+        if (!_isMoveable) return;
         if (context.phase == InputActionPhase.Started)
         {
             OnJumpEvent?.Invoke();
@@ -103,11 +119,13 @@ public class InputManager
 
     void OnDash(InputAction.CallbackContext context)
     {
+        if (!_isMoveable) return;
         OnDashEvent?.Invoke();
     }
 
     void OnAttack(InputAction.CallbackContext context)
     {
+        if (!_isMoveable) return;
         OnAttackEvent?.Invoke();
     }
 
@@ -123,5 +141,17 @@ public class InputManager
 
         _myPlayerInputSystem.MyPlayer.Disable();
         OnJumpEvent = null;
+    }
+
+    public void SetPlayerMoveable(bool isMoveable)
+    {
+        _isMoveable = isMoveable;
+        if (!isMoveable)
+        {
+            _isMove = false;
+            _isJumpPress = false;
+            _isJumpCut = false;
+            _moveVector = Vector2.zero;
+        }
     }
 }

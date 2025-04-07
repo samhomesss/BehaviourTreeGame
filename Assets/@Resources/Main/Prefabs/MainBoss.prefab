@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 7328769883728206322}
   - component: {fileID: 8650694712894707914}
   - component: {fileID: 6538998051327896565}
+  - component: {fileID: 9086915142127282128}
   m_Layer: 7
   m_Name: MainBoss
   m_TagString: Untagged
@@ -413,7 +414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6b60cbfc31c6e4595a4843d0dc83d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 40
 --- !u!114 &6538998051327896565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,6 +426,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545b4ea5360220a42a77e06af3d0fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9086915142127282128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331395187402205944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b66384b0fd479478c13d19a1db4fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _earthquake: {fileID: 0}
+  _wave: {fileID: 0}
 --- !u!1 &2624140973452944628
 GameObject:
   m_ObjectHideFlags: 0
