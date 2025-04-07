@@ -14,8 +14,14 @@ public class BossDamagedEffect : MonoBehaviour
         _behaviorGraphAgent = GetComponent<BehaviorGraphAgent>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        BossHpManager.BossHpDamageManager.OnEnemyDamagedEvent += SetBlackBoardBossHp;
         BossHpManager.BossHpDamageManager.OnEnemyDamagedEvent += Die;
         BossHpManager.BossHpDamageManager.OnEnemyDamagedEvent += _ => DamagedEffect();
+    }
+
+    private void SetBlackBoardBossHp(int bossHp)
+    {
+        _behaviorGraphAgent.SetVariableValue("BossHp", bossHp);
     }
 
     private void Die(int bossHp)
