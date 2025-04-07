@@ -49,6 +49,11 @@ public partial class MainUpAttackAction : Action
             return Status.Failure;
         }
 
+        if(_rb.linearVelocityY < 0)
+        {
+            _rb.gravityScale = 4f;
+        }
+
         if (_animationHash == _animator.GetCurrentAnimatorStateInfo(0).shortNameHash)
         {
             return Status.Running;
@@ -61,6 +66,7 @@ public partial class MainUpAttackAction : Action
 
     protected override void OnEnd()
     {
+        _rb.gravityScale = 1f;
         Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("IsAttacking", false);
         Self.Value.GetComponent<BehaviorGraphAgent>().SetVariableValue("CurrentState", MainBossState.IDLE);
     }
